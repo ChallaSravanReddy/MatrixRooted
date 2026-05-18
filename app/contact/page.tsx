@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import Link from "next/link";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { 
   Briefcase, 
   Clock, 
@@ -107,8 +105,6 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-[#0d0d0d] text-[#ffffff] font-sans overflow-hidden flex flex-col justify-between">
-      <Navbar />
-
       {/* Main Container Area */}
       <main className="flex-1 container mx-auto max-w-4xl px-4 py-[48px] md:py-[80px]">
         
@@ -336,8 +332,6 @@ export default function ContactPage() {
         </motion.div>
 
       </main>
-
-      <Footer />
     </div>
   );
 }

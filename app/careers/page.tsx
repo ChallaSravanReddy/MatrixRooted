@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import Link from "next/link";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
 import { 
   Code, 
   Brain, 
@@ -106,8 +104,6 @@ export default function CareersPage() {
 
   return (
     <div className="min-h-screen bg-[#0d0d0d] text-[#ffffff] font-sans overflow-hidden">
-      <Navbar />
-
       {/* Hero Section */}
       <section className="relative py-[64px] md:py-[112px] overflow-hidden border-b border-[#00ffcc]/10">
         {/* Subtle geometric structural patterns */}
@@ -350,8 +346,6 @@ export default function CareersPage() {
 
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }
