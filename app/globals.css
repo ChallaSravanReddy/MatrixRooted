@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0d0d0d;
+  --color-foreground: #ffffff;
+  --color-card: #141414;
+  --color-card-foreground: #ffffff;
+  --color-primary: #00ffcc;
+  --color-primary-foreground: #0d0d0d;
+  --color-muted: #1f1f1f;
+  --color-muted-foreground: #94a3b8; /* slate-400 */
+  --color-border: #222222;
+  --color-accent: #00ffcc;
+}
+
+:root {
+  --background: #0d0d0d;
+  --foreground: #ffffff;
+  --card: #141414;
+  --card-foreground: #ffffff;
+  --primary: #00ffcc;
+  --primary-foreground: #0d0d0d;
+  --muted: #1f1f1f;
+  --muted-foreground: #94a3b8;
+  --border: #222222;
+  --accent: #00ffcc;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter), sans-serif;
+    line-height: 1.6;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--foreground);
+    letter-spacing: -0.02em;
+  }
+}
