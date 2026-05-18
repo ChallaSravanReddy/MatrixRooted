@@ -106,7 +106,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F9F5F0] text-[#3D2B1F] font-sans overflow-hidden flex flex-col justify-between">
+    <div className="min-h-screen bg-[#0d0d0d] text-[#ffffff] font-sans overflow-hidden flex flex-col justify-between">
       <Navbar />
 
       {/* Main Container Area */}
@@ -118,7 +118,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 400, damping: 25 }}
-            className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#8B4513]/5 border border-[#8B4513]/10 text-xs font-bold text-[#8B4513] mb-[16px]"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#00ffcc]/5 border border-[#00ffcc]/10 text-xs font-bold text-[#00ffcc] mb-[16px]"
           >
             <Sparkles size={12} />
             ENTERPRISE PROJECT INTAKE
@@ -128,7 +128,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 400, damping: 25, delay: 0.1 }}
-            className="text-3xl md:text-5xl font-bold tracking-tight text-[#3D2B1F] mb-[16px]"
+            className="text-3xl md:text-5xl font-bold tracking-tight text-[#ffffff] mb-[16px]"
           >
             Start a Software Project
           </motion.h1>
@@ -137,7 +137,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 400, damping: 25, delay: 0.2 }}
-            className="text-xs md:text-sm text-[#3D2B1F]/80 leading-[1.6] font-medium"
+            className="text-xs md:text-sm text-[#ffffff]/80 leading-[1.6] font-medium"
           >
             Tell us about your organization, core goals, and deliverables needed. Our technical team evaluates custom solutions and prepares architectural scopes.
           </motion.p>
@@ -148,7 +148,7 @@ export default function ContactPage() {
           initial={{ opacity: 0, scale: 0.98 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "spring", stiffness: 400, damping: 25, delay: 0.3 }}
-          className="bg-white border border-[#8B4513]/20 rounded-[12px] p-[24px] md:p-[48px] shadow-none relative"
+          className="bg-[#141414] border border-[#00ffcc]/20 rounded-[12px] p-[24px] md:p-[48px] shadow-none relative"
         >
           {submitted ? (
             /* Successful submission feedback confirmation state */
@@ -158,20 +158,20 @@ export default function ContactPage() {
               </div>
               
               <div className="space-y-2 max-w-md mx-auto">
-                <h3 className="text-2xl font-bold text-[#3D2B1F]">Application Received</h3>
-                <p className="text-xs text-[#3D2B1F]/80 leading-[1.6] font-medium">
+                <h3 className="text-2xl font-bold text-[#ffffff]">Application Received</h3>
+                <p className="text-xs text-[#ffffff]/80 leading-[1.6] font-medium">
                   Thank you for submitting your project specifications, <span className="font-bold">{formData.fullName}</span>. 
-                  Our lead architects will evaluate your objectives and connect with you during your stated ideal timeframe: <span className="underline decoration-[#8B4513]/40 font-bold">{formData.preferredContactTime}</span>.
+                  Our lead architects will evaluate your objectives and connect with you during your stated ideal timeframe: <span className="underline decoration-[#00ffcc]/40 font-bold">{formData.preferredContactTime}</span>.
                 </p>
               </div>
 
-              <div className="pt-[16px] p-4 bg-[#F9F5F0]/60 rounded-[8px] border border-[#8B4513]/10 max-w-sm mx-auto text-left text-[11px] space-y-1">
-                <p className="font-bold text-[#8B4513] text-[10px] uppercase tracking-wider">Estimated Review Turnaround</p>
-                <p className="text-[#3D2B1F]/90 font-medium">12 to 24 operational hours. Direct business calls will be scheduled via verified meeting links.</p>
+              <div className="pt-[16px] p-4 bg-[#0d0d0d]/60 rounded-[8px] border border-[#00ffcc]/10 max-w-sm mx-auto text-left text-[11px] space-y-1">
+                <p className="font-bold text-[#00ffcc] text-[10px] uppercase tracking-wider">Estimated Review Turnaround</p>
+                <p className="text-[#ffffff]/90 font-medium">12 to 24 operational hours. Direct business calls will be scheduled via verified meeting links.</p>
               </div>
 
               <div className="pt-[16px]">
-                <Button asChild className="rounded-[8px] bg-[#D2B48C] text-[#3D2B1F] hover:bg-[#C1A37B] font-bold text-xs h-10 px-6 shadow-none">
+                <Button asChild className="rounded-[8px] bg-[#00ffcc] text-[#ffffff] hover:bg-[#00e6b8] font-bold text-xs h-10 px-6 shadow-none">
                   <Link href="/">Return to Homepage</Link>
                 </Button>
               </div>
@@ -189,8 +189,8 @@ export default function ContactPage() {
               <div className="grid md:grid-cols-2 gap-[24px]">
                 {/* Full Name */}
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-[#3D2B1F] flex items-center gap-1.5">
-                    <User size={12} className="text-[#8B4513]" /> Your Full Name <span className="text-rose-700">*</span>
+                  <label className="text-xs font-bold text-[#ffffff] flex items-center gap-1.5">
+                    <User size={12} className="text-[#00ffcc]" /> Your Full Name <span className="text-rose-700">*</span>
                   </label>
                   <input 
                     type="text" 
@@ -199,14 +199,14 @@ export default function ContactPage() {
                     value={formData.fullName} 
                     onChange={handleChange} 
                     placeholder="e.g. Sravan Reddy" 
-                    className="w-full bg-[#F9F5F0] border border-[#8B4513]/20 focus:border-[#8B4513] rounded-[8px] p-3 text-xs text-[#3D2B1F] outline-none transition-all font-medium"
+                    className="w-full bg-[#0d0d0d] border border-[#00ffcc]/20 focus:border-[#00ffcc] rounded-[8px] p-3 text-xs text-[#ffffff] outline-none transition-all font-medium"
                   />
                 </div>
 
                 {/* Email Address */}
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-[#3D2B1F] flex items-center gap-1.5">
-                    <Mail size={12} className="text-[#8B4513]" /> Business Email <span className="text-rose-700">*</span>
+                  <label className="text-xs font-bold text-[#ffffff] flex items-center gap-1.5">
+                    <Mail size={12} className="text-[#00ffcc]" /> Business Email <span className="text-rose-700">*</span>
                   </label>
                   <input 
                     type="email" 
@@ -215,7 +215,7 @@ export default function ContactPage() {
                     value={formData.email} 
                     onChange={handleChange} 
                     placeholder="e.g. founder@company.com" 
-                    className="w-full bg-[#F9F5F0] border border-[#8B4513]/20 focus:border-[#8B4513] rounded-[8px] p-3 text-xs text-[#3D2B1F] outline-none transition-all font-medium"
+                    className="w-full bg-[#0d0d0d] border border-[#00ffcc]/20 focus:border-[#00ffcc] rounded-[8px] p-3 text-xs text-[#ffffff] outline-none transition-all font-medium"
                   />
                 </div>
               </div>
@@ -223,8 +223,8 @@ export default function ContactPage() {
               <div className="grid md:grid-cols-2 gap-[24px]">
                 {/* Company Name */}
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-[#3D2B1F] flex items-center gap-1.5">
-                    <Building2 size={12} className="text-[#8B4513]" /> Organization / Company Name
+                  <label className="text-xs font-bold text-[#ffffff] flex items-center gap-1.5">
+                    <Building2 size={12} className="text-[#00ffcc]" /> Organization / Company Name
                   </label>
                   <input 
                     type="text" 
@@ -232,20 +232,20 @@ export default function ContactPage() {
                     value={formData.companyName} 
                     onChange={handleChange} 
                     placeholder="e.g. Matrix Solutions Ltd (Optional)" 
-                    className="w-full bg-[#F9F5F0] border border-[#8B4513]/20 focus:border-[#8B4513] rounded-[8px] p-3 text-xs text-[#3D2B1F] outline-none transition-all font-medium"
+                    className="w-full bg-[#0d0d0d] border border-[#00ffcc]/20 focus:border-[#00ffcc] rounded-[8px] p-3 text-xs text-[#ffffff] outline-none transition-all font-medium"
                   />
                 </div>
 
                 {/* Primary Project Scope */}
                 <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-[#3D2B1F] flex items-center gap-1.5">
-                    <Briefcase size={12} className="text-[#8B4513]" /> Target Expertise Needed <span className="text-rose-700">*</span>
+                  <label className="text-xs font-bold text-[#ffffff] flex items-center gap-1.5">
+                    <Briefcase size={12} className="text-[#00ffcc]" /> Target Expertise Needed <span className="text-rose-700">*</span>
                   </label>
                   <select 
                     name="projectType" 
                     value={formData.projectType} 
                     onChange={handleChange}
-                    className="w-full bg-[#F9F5F0] border border-[#8B4513]/20 focus:border-[#8B4513] rounded-[8px] p-3 text-xs text-[#3D2B1F] outline-none transition-all font-medium cursor-pointer"
+                    className="w-full bg-[#0d0d0d] border border-[#00ffcc]/20 focus:border-[#00ffcc] rounded-[8px] p-3 text-xs text-[#ffffff] outline-none transition-all font-medium cursor-pointer"
                   >
                     {projectTypes.map((pt, idx) => (
                       <option key={idx} value={pt}>{pt}</option>
@@ -256,14 +256,14 @@ export default function ContactPage() {
 
               {/* Estimated Budget Allocation */}
               <div className="space-y-1.5">
-                <label className="text-xs font-bold text-[#3D2B1F] flex items-center gap-1.5">
-                  <Coins size={12} className="text-[#8B4513]" /> Estimated Project Budget Allocation <span className="text-rose-700">*</span>
+                <label className="text-xs font-bold text-[#ffffff] flex items-center gap-1.5">
+                  <Coins size={12} className="text-[#00ffcc]" /> Estimated Project Budget Allocation <span className="text-rose-700">*</span>
                 </label>
                 <select 
                   name="budgetRange" 
                   value={formData.budgetRange} 
                   onChange={handleChange}
-                  className="w-full bg-[#F9F5F0] border border-[#8B4513]/20 focus:border-[#8B4513] rounded-[8px] p-3 text-xs text-[#3D2B1F] outline-none transition-all font-medium cursor-pointer"
+                  className="w-full bg-[#0d0d0d] border border-[#00ffcc]/20 focus:border-[#00ffcc] rounded-[8px] p-3 text-xs text-[#ffffff] outline-none transition-all font-medium cursor-pointer"
                 >
                   {budgetRanges.map((br, idx) => (
                     <option key={idx} value={br}>{br}</option>
@@ -273,10 +273,10 @@ export default function ContactPage() {
 
               {/* Description Core Needs */}
               <div className="space-y-1.5">
-                <label className="text-xs font-bold text-[#3D2B1F] block">
+                <label className="text-xs font-bold text-[#ffffff] block">
                   Project Description & Core Deliverables Needed <span className="text-rose-700">*</span>
                 </label>
-                <p className="text-[11px] text-[#3D2B1F]/60 font-medium pb-1">
+                <p className="text-[11px] text-[#ffffff]/60 font-medium pb-1">
                   Describe what you are aiming to build, technical frameworks preferred, or business problems we need to automate.
                 </p>
                 <textarea 
@@ -286,14 +286,14 @@ export default function ContactPage() {
                   value={formData.description} 
                   onChange={handleChange} 
                   placeholder="We are looking to scale our digital platform with responsive interfaces, custom Supabase permissions, and integrated AI notification routines..." 
-                  className="w-full bg-[#F9F5F0] border border-[#8B4513]/20 focus:border-[#8B4513] rounded-[8px] p-3 text-xs text-[#3D2B1F] outline-none transition-all font-medium resize-y"
+                  className="w-full bg-[#0d0d0d] border border-[#00ffcc]/20 focus:border-[#00ffcc] rounded-[8px] p-3 text-xs text-[#ffffff] outline-none transition-all font-medium resize-y"
                 />
               </div>
 
               {/* Communication timeframe instructions */}
               <div className="space-y-1.5">
-                <label className="text-xs font-bold text-[#3D2B1F] flex items-center gap-1.5">
-                  <Clock size={12} className="text-[#8B4513]" /> Best Time & Medium for Business Discussion <span className="text-rose-700">*</span>
+                <label className="text-xs font-bold text-[#ffffff] flex items-center gap-1.5">
+                  <Clock size={12} className="text-[#00ffcc]" /> Best Time & Medium for Business Discussion <span className="text-rose-700">*</span>
                 </label>
                 <input 
                   type="text" 
@@ -302,14 +302,14 @@ export default function ContactPage() {
                   value={formData.preferredContactTime} 
                   onChange={handleChange} 
                   placeholder="e.g. Weekdays between 10 AM - 2 PM via Phone call or Google Meet link" 
-                  className="w-full bg-[#F9F5F0] border border-[#8B4513]/20 focus:border-[#8B4513] rounded-[8px] p-3 text-xs text-[#3D2B1F] outline-none transition-all font-medium"
+                  className="w-full bg-[#0d0d0d] border border-[#00ffcc]/20 focus:border-[#00ffcc] rounded-[8px] p-3 text-xs text-[#ffffff] outline-none transition-all font-medium"
                 />
               </div>
 
               {/* Form trigger layout */}
-              <div className="pt-[16px] border-t border-[#8B4513]/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-[16px]">
-                <div className="text-[11px] text-[#3D2B1F]/60 font-medium flex items-center gap-1.5 max-w-xs">
-                  <HelpCircle size={14} className="text-[#8B4513] shrink-0" />
+              <div className="pt-[16px] border-t border-[#00ffcc]/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-[16px]">
+                <div className="text-[11px] text-[#ffffff]/60 font-medium flex items-center gap-1.5 max-w-xs">
+                  <HelpCircle size={14} className="text-[#00ffcc] shrink-0" />
                   <span>Confidential scoping agreement guaranteed upon request.</span>
                 </div>
 
@@ -317,14 +317,14 @@ export default function ContactPage() {
                   <Button 
                     type="submit" 
                     disabled={submitting}
-                    className="w-full sm:w-auto rounded-[8px] bg-[#D2B48C] text-[#3D2B1F] hover:bg-[#C1A37B] font-bold text-xs h-11 px-8 shadow-none flex items-center justify-center gap-2"
+                    className="w-full sm:w-auto rounded-[8px] bg-[#00ffcc] text-[#ffffff] hover:bg-[#00e6b8] font-bold text-xs h-11 px-8 shadow-none flex items-center justify-center gap-2"
                   >
                     {submitting ? (
                       <span>Saving Application...</span>
                     ) : (
                       <>
                         <span>Submit Project Brief</span>
-                        <Send size={12} className="text-[#8B4513]" />
+                        <Send size={12} className="text-[#00ffcc]" />
                       </>
                     )}
                   </Button>

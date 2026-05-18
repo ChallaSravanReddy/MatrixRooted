@@ -156,7 +156,7 @@ export default function LessonPage() {
   const renderVideoPlayer = (url: string) => {
     if (!url) {
       return (
-        <div className="w-full h-full bg-white flex items-center justify-center text-slate-400">
+        <div className="w-full h-full bg-[#141414] flex items-center justify-center text-slate-400">
           No video URL provided
         </div>
       );
@@ -202,7 +202,7 @@ export default function LessonPage() {
 
   // Reusable component block for the Syllabus/Modules outline
   const renderSyllabus = () => (
-    <div className="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-6 font-sans">
+    <div className="bg-[#141414] border border-slate-200 rounded-3xl p-6 shadow-sm space-y-6 font-sans">
       <div className="border-b border-slate-100 pb-4 flex items-center justify-between">
         <div>
           <h2 className="text-base font-bold text-slate-900">Curriculum Structure</h2>
@@ -248,7 +248,7 @@ export default function LessonPage() {
                             {lesson.has_assignment && <span className={`text-[9px] ${isActive ? "text-amber-200" : "text-amber-600 font-semibold"}`}>Task</span>}
                           </div>
                         </div>
-                        {isActive && <div className="w-1.5 h-1.5 rounded-full bg-white shrink-0"></div>}
+                        {isActive && <div className="w-1.5 h-1.5 rounded-full bg-[#141414] shrink-0"></div>}
                       </button>
                     );
                   })
@@ -291,7 +291,7 @@ export default function LessonPage() {
                           {lesson.has_assignment && <span className={`text-[9px] ${isActive ? "text-amber-200" : "text-amber-600 font-semibold"}`}>Task</span>}
                         </div>
                       </div>
-                      {isActive && <div className="w-1.5 h-1.5 rounded-full bg-white shrink-0"></div>}
+                      {isActive && <div className="w-1.5 h-1.5 rounded-full bg-[#141414] shrink-0"></div>}
                     </button>
                   );
                 })}
@@ -355,7 +355,7 @@ export default function LessonPage() {
 
         {/* Assignment / Assessment Submission Section (Exclusively rendered if required) */}
         {requiresAssessment && (
-          <div className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-sm space-y-6 font-sans">
+          <div className="bg-[#141414] border border-slate-200 rounded-3xl p-6 md:p-8 shadow-sm space-y-6 font-sans">
             <h2 className="text-lg font-bold flex items-center gap-2.5 text-slate-900 border-b border-slate-100 pb-3">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 text-blue-600 shrink-0">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
@@ -410,7 +410,7 @@ export default function LessonPage() {
           {prevLesson ? (
             <button
               onClick={() => window.location.href = `/dashboard/courses/${courseId}/lessons/${prevLesson.id}`}
-              className="px-5 py-3 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-2 shadow-xs"
+              className="px-5 py-3 bg-[#141414] border border-slate-300 hover:bg-slate-50 text-slate-700 font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-2 shadow-xs"
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
@@ -428,7 +428,7 @@ export default function LessonPage() {
                 }
                 window.location.href = `/dashboard/courses/${courseId}/lessons/${nextLesson.id}`;
               }}
-              className="px-8 py-3 bg-slate-900 hover:bg-black text-white font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-2 shadow-md active:scale-[0.98]"
+              className="px-8 py-3 bg-slate-900 hover:bg-[#000000] text-white font-bold text-xs rounded-xl transition-all flex items-center justify-center gap-2 shadow-md active:scale-[0.98]"
             >
               <span className="truncate max-w-[180px]">Next: {nextLesson.title}</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
@@ -457,7 +457,7 @@ export default function LessonPage() {
     <div className="flex flex-col h-screen bg-slate-50 text-slate-900 font-sans overflow-hidden">
 
       {/* Top Navigation Bar */}
-      <header className="flex-shrink-0 h-16 border-b border-slate-200 bg-white flex items-center px-6 justify-between z-10 shadow-xs">
+      <header className="flex-shrink-0 h-16 border-b border-slate-200 bg-[#141414] flex items-center px-6 justify-between z-10 shadow-xs">
         <div className="flex items-center gap-4">
           <button
             onClick={() => window.location.href = `/dashboard/courses/${courseId}`}
@@ -493,7 +493,7 @@ export default function LessonPage() {
             {/* Left Side: Video + Modules Below */}
             <div className="lg:col-span-5 xl:col-span-5 flex flex-col lg:h-full space-y-6 min-h-0">
               {/* Reduced size Video Container */}
-              <div className="w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-md border border-slate-200/80">
+              <div className="w-full aspect-video bg-[#000000] rounded-2xl overflow-hidden shadow-md border border-slate-200/80">
                 {(!currentLesson.is_preview && !isEnrolled) ? (
                   <div className="w-full h-full bg-slate-50 flex flex-col items-center justify-center p-6 text-center space-y-4">
                     <div className="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center border border-blue-500/20">

@@ -26,7 +26,7 @@ export function EnrollmentModal({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-lg bg-white text-slate-900 border-slate-200">
+      <DialogContent className="max-w-lg bg-[#141414] text-slate-900 border-slate-200">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold text-slate-900">Enroll in {courseTitle}</DialogTitle>
           <DialogDescription className="text-slate-500">

@@ -16,7 +16,7 @@ export function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-[#8B4513]/10 bg-[#F9F5F0]/80 backdrop-blur-[10px] transition-all">
+    <header className="sticky top-0 z-50 w-full border-b border-[#00ffcc]/10 bg-[#0d0d0d]/80 backdrop-blur-[10px] transition-all">
       <div className="container mx-auto max-w-7xl px-4 h-20 flex items-center justify-between">
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-3 group">
@@ -28,7 +28,7 @@ export function Navbar() {
               className="object-contain transition-transform duration-300 group-hover:opacity-90" 
               priority 
             />
-            <span className="font-bold text-base tracking-tight text-[#3D2B1F]">
+            <span className="font-bold text-base tracking-tight text-[#ffffff]">
               Matrix Root
             </span>
           </Link>
@@ -42,14 +42,14 @@ export function Navbar() {
                   href={link.href}
                   className={`relative px-3.5 py-2 text-xs font-bold tracking-tight transition-colors rounded-[8px] group ${
                     isActive 
-                      ? "text-[#8B4513]" 
-                      : "text-[#3D2B1F]/80 hover:text-[#3D2B1F]"
+                      ? "text-[#00ffcc]" 
+                      : "text-[#ffffff]/80 hover:text-[#ffffff]"
                   }`}
                 >
                   {link.label}
                   {/* Subtle underline expanding from center on hover */}
                   <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 h-[2px] rounded-full transition-all duration-300 ${
-                    isActive ? "w-[calc(100%-20px)] bg-[#8B4513]" : "w-0 bg-[#8B4513] group-hover:w-[calc(100%-20px)]"
+                    isActive ? "w-[calc(100%-20px)] bg-[#00ffcc]" : "w-0 bg-[#00ffcc] group-hover:w-[calc(100%-20px)]"
                   }`} />
                 </Link>
               );
@@ -61,12 +61,12 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <Link 
               href="/apply" 
-              className="relative text-xs font-bold tracking-tight text-[#3D2B1F] group py-1 px-2 hidden sm:block"
+              className="relative text-xs font-bold tracking-tight text-[#ffffff] group py-1 px-2 hidden sm:block"
             >
               Apply for Internship
-              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#8B4513] transition-all duration-300 group-hover:w-full rounded-full" />
+              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#00ffcc] transition-all duration-300 group-hover:w-full rounded-full" />
             </Link>
-            <Button asChild size="sm" className="rounded-[8px] px-5 h-9 font-bold text-xs bg-[#D2B48C] text-[#3D2B1F] hover:bg-[#C1A37B] transition-colors shadow-none">
+            <Button asChild size="sm" className="rounded-[8px] px-5 h-9 font-bold text-xs bg-[#00ffcc] text-black hover:bg-[#00e6b8] transition-colors shadow-none">
               <Link href="/contact">Start a Project</Link>
             </Button>
           </div>

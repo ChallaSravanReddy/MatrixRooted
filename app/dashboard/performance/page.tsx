@@ -154,8 +154,8 @@ export default function PerformanceReportCardPage() {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen bg-[#F9F5F0] items-center justify-center font-sans">
-        <div className="animate-spin h-8 w-8 border-4 border-[#8B4513] border-t-transparent rounded-full"></div>
+      <div className="flex min-h-screen bg-[#0d0d0d] items-center justify-center font-sans">
+        <div className="animate-spin h-8 w-8 border-4 border-[#00ffcc] border-t-transparent rounded-full"></div>
       </div>
     );
   }
@@ -170,22 +170,22 @@ export default function PerformanceReportCardPage() {
       initial="hidden"
       animate="visible"
       key={activeSemesterId}
-      className="bg-white border border-[#8B4513]/20 rounded-[12px] overflow-hidden shadow-none font-sans"
+      className="bg-[#141414] border border-[#00ffcc]/20 rounded-[12px] overflow-hidden shadow-none font-sans"
     >
-      <div className="p-[24px] md:p-[32px] border-b border-[#8B4513]/10 flex flex-col sm:flex-row sm:items-center justify-between gap-[16px] bg-[#F9F5F0]/50">
+      <div className="p-[24px] md:p-[32px] border-b border-[#00ffcc]/10 flex flex-col sm:flex-row sm:items-center justify-between gap-[16px] bg-[#0d0d0d]/50">
         <div>
           <div className="flex items-center gap-[8px]">
-            <h3 className="text-lg font-medium tracking-[-0.02em] text-[#3D2B1F]">{activeSemData.term} Breakdown</h3>
-            <span className="text-[10px] font-medium text-[#8B4513] bg-[#8B4513]/5 px-2 py-0.5 rounded-[12px] border border-[#8B4513]/10">
+            <h3 className="text-lg font-medium tracking-[-0.02em] text-[#ffffff]">{activeSemData.term} Breakdown</h3>
+            <span className="text-[10px] font-medium text-[#00ffcc] bg-[#00ffcc]/5 px-2 py-0.5 rounded-[12px] border border-[#00ffcc]/10">
               {activeSemData.academicYear}
             </span>
           </div>
-          <p className="text-xs text-[#3D2B1F]/70 mt-1">Subject-wise evaluation scorecard tracking standard grading metrics</p>
+          <p className="text-xs text-[#ffffff]/70 mt-1">Subject-wise evaluation scorecard tracking standard grading metrics</p>
         </div>
         
         <div className="flex items-center gap-3 self-start sm:self-auto">
           <div className="text-right">
-            <span className="text-[10px] uppercase font-medium text-[#3D2B1F]/60 block tracking-wider">Term Score Status</span>
+            <span className="text-[10px] uppercase font-medium text-[#ffffff]/60 block tracking-wider">Term Score Status</span>
             <span className="text-xs font-semibold text-emerald-800">{activeSemData.evaluationStatus}</span>
           </div>
         </div>
@@ -194,7 +194,7 @@ export default function PerformanceReportCardPage() {
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="border-b border-[#8B4513]/10 text-[10px] font-medium uppercase tracking-wider text-[#3D2B1F]/60 bg-[#F9F5F0]/20">
+            <tr className="border-b border-[#00ffcc]/10 text-[10px] font-medium uppercase tracking-wider text-[#ffffff]/60 bg-[#0d0d0d]/20">
               <th className="p-4 pl-6">Subject Code</th>
               <th className="p-4">Course Title</th>
               <th className="p-4 text-center">Credits</th>
@@ -203,17 +203,17 @@ export default function PerformanceReportCardPage() {
               <th className="p-4 pr-6 text-right">Status</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-[#8B4513]/5 text-xs">
+          <tbody className="divide-y divide-[#00ffcc]/5 text-xs">
             {activeSemData.subjects.map((subj) => (
-              <tr key={subj.code} className="hover:bg-[#F9F5F0]/30 transition-colors">
-                <td className="p-4 pl-6 font-medium text-[#3D2B1F]">
-                  <span className="px-2 py-0.5 rounded-[4px] bg-[#8B4513]/5 text-[#8B4513] text-[11px] font-mono border border-[#8B4513]/10">{subj.code}</span>
+              <tr key={subj.code} className="hover:bg-[#0d0d0d]/30 transition-colors">
+                <td className="p-4 pl-6 font-medium text-[#ffffff]">
+                  <span className="px-2 py-0.5 rounded-[4px] bg-[#00ffcc]/5 text-[#00ffcc] text-[11px] font-mono border border-[#00ffcc]/10">{subj.code}</span>
                 </td>
-                <td className="p-4 font-normal text-[#3D2B1F] max-w-xs truncate">{subj.title}</td>
-                <td className="p-4 text-center font-normal text-[#3D2B1F]/70">{subj.credits}</td>
-                <td className="p-4 text-center font-normal text-[#3D2B1F]/70">{subj.internalMarks}</td>
+                <td className="p-4 font-normal text-[#ffffff] max-w-xs truncate">{subj.title}</td>
+                <td className="p-4 text-center font-normal text-[#ffffff]/70">{subj.credits}</td>
+                <td className="p-4 text-center font-normal text-[#ffffff]/70">{subj.internalMarks}</td>
                 <td className="p-4 text-center">
-                  <span className="font-medium text-[#8B4513] bg-[#8B4513]/5 px-2 py-0.5 rounded-[4px] border border-[#8B4513]/10 text-xs">
+                  <span className="font-medium text-[#00ffcc] bg-[#00ffcc]/5 px-2 py-0.5 rounded-[4px] border border-[#00ffcc]/10 text-xs">
                     {subj.externalGrade}
                   </span>
                 </td>
@@ -228,25 +228,25 @@ export default function PerformanceReportCardPage() {
         </table>
       </div>
       
-      <div className="p-4 bg-[#F9F5F0]/30 border-t border-[#8B4513]/10 flex flex-wrap items-center justify-between gap-4 text-xs text-[#3D2B1F]/70">
+      <div className="p-4 bg-[#0d0d0d]/30 border-t border-[#00ffcc]/10 flex flex-wrap items-center justify-between gap-4 text-xs text-[#ffffff]/70">
         <div className="flex items-center gap-2">
-          <ShieldCheck size={14} className="text-[#8B4513]" />
+          <ShieldCheck size={14} className="text-[#00ffcc]" />
           <span>All internal practical modules accredited by Matrix Root Evaluation Boards.</span>
         </div>
-        <div className="font-medium text-[#3D2B1F]">
-          Cleared Component Credits: <span className="text-[#8B4513]">{activeSemData.creditsCleared}</span>
+        <div className="font-medium text-[#ffffff]">
+          Cleared Component Credits: <span className="text-[#00ffcc]">{activeSemData.creditsCleared}</span>
         </div>
       </div>
     </motion.div>
   );
 
   return (
-    <div className="flex h-screen bg-[#F9F5F0] text-[#3D2B1F] overflow-hidden font-sans">
+    <div className="flex h-screen bg-[#0d0d0d] text-[#ffffff] overflow-hidden font-sans">
       {/* Sidebar Navigation Pane */}
-      <aside className="w-64 hidden lg:flex flex-col border-r border-[#8B4513]/10 bg-white shrink-0">
-        <div className="p-6 flex items-center gap-3 border-b border-[#8B4513]/10">
+      <aside className="w-64 hidden lg:flex flex-col border-r border-[#00ffcc]/10 bg-[#141414] shrink-0">
+        <div className="p-6 flex items-center gap-3 border-b border-[#00ffcc]/10">
           <Image src="/img/Matrixroot_onlyimglogo-removebg-preview.png" alt="Logo" width={32} height={32} />
-          <span className="font-medium text-lg text-[#3D2B1F]">Matrix Root</span>
+          <span className="font-medium text-lg text-[#ffffff]">Matrix Root</span>
         </div>
         
         <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
@@ -267,23 +267,23 @@ export default function PerformanceReportCardPage() {
           className="fixed inset-0 z-50 lg:hidden"
           onClick={() => setIsSidebarOpen(false)}
         >
-          <div className="absolute inset-0 bg-[#3D2B1F]/40 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-[#ffffff]/40 backdrop-blur-sm" />
           <motion.aside 
             initial={{ x: "-100%" }}
             animate={{ x: 0 }}
             exit={{ x: "-100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="absolute top-0 left-0 bottom-0 w-72 bg-white flex flex-col border-r border-[#8B4513]/10"
+            className="absolute top-0 left-0 bottom-0 w-72 bg-[#141414] flex flex-col border-r border-[#00ffcc]/10"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="p-6 flex items-center justify-between border-b border-[#8B4513]/10">
+            <div className="p-6 flex items-center justify-between border-b border-[#00ffcc]/10">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-[8px] bg-[#8B4513]/10 flex items-center justify-center text-[#8B4513]">
+                <div className="w-8 h-8 rounded-[8px] bg-[#00ffcc]/10 flex items-center justify-center text-[#00ffcc]">
                   <GraduationCap size={20} />
                 </div>
-                <span className="font-bold text-base text-[#3D2B1F]">Matrix Root</span>
+                <span className="font-bold text-base text-[#ffffff]">Matrix Root</span>
               </div>
-              <button onClick={() => setIsSidebarOpen(false)} className="p-2 text-[#3D2B1F]/40 hover:text-[#3D2B1F]">
+              <button onClick={() => setIsSidebarOpen(false)} className="p-2 text-[#ffffff]/40 hover:text-[#ffffff]">
                 <X size={20} />
               </button>
             </div>
@@ -303,26 +303,26 @@ export default function PerformanceReportCardPage() {
 
       {/* Primary Analytics Content Dashboard */}
       <main className="flex-1 flex flex-col h-full overflow-hidden">
-        <header className="h-16 border-b border-[#8B4513]/10 bg-[#F9F5F0]/50 backdrop-blur-md flex items-center justify-between px-6 shrink-0">
+        <header className="h-16 border-b border-[#00ffcc]/10 bg-[#0d0d0d]/50 backdrop-blur-md flex items-center justify-between px-6 shrink-0">
           <div className="flex items-center gap-4">
             <button 
               onClick={() => setIsSidebarOpen(true)}
-              className="lg:hidden p-2 -ml-2 text-[#8B4513] hover:bg-[#8B4513]/5 rounded-[8px]"
+              className="lg:hidden p-2 -ml-2 text-[#00ffcc] hover:bg-[#00ffcc]/5 rounded-[8px]"
             >
               <Menu size={20} />
             </button>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition={{ type: "spring", stiffness: 400, damping: 25 }}>
-              <Button variant="outline" size="icon" onClick={() => router.push('/dashboard')} className="rounded-[12px] h-8 w-8 border-[#8B4513]/20 shadow-none">
-                <ArrowLeft size={16} className="text-[#8B4513]" />
+              <Button variant="outline" size="icon" onClick={() => router.push('/dashboard')} className="rounded-[12px] h-8 w-8 border-[#00ffcc]/20 shadow-none">
+                <ArrowLeft size={16} className="text-[#00ffcc]" />
               </Button>
             </motion.div>
             <div>
-              <h2 className="text-sm font-semibold uppercase tracking-wider text-[#3D2B1F]">Performance Studio Node</h2>
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-[#ffffff]">Performance Studio Node</h2>
             </div>
           </div>
 
           <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-[12px] bg-[#8B4513]/5 text-[10px] font-medium text-[#8B4513] border border-[#8B4513]/10">
+            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-[12px] bg-[#00ffcc]/5 text-[10px] font-medium text-[#00ffcc] border border-[#00ffcc]/10">
               <Award size={12} />
               <span>CGPA Ledger Synchronized</span>
             </div>
@@ -334,56 +334,56 @@ export default function PerformanceReportCardPage() {
           {/* Top Performance Status Widget Container */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-[24px]">
             
-            <motion.div variants={cardVariants} initial="hidden" animate="visible" className="bg-white border border-[#8B4513]/20 rounded-[12px] p-[24px] flex flex-col justify-between shadow-none">
+            <motion.div variants={cardVariants} initial="hidden" animate="visible" className="bg-[#141414] border border-[#00ffcc]/20 rounded-[12px] p-[24px] flex flex-col justify-between shadow-none">
               <div className="flex items-center justify-between mb-[16px]">
-                <span className="text-[10px] font-medium uppercase tracking-wider text-[#3D2B1F]/60">Cumulative Index</span>
-                <span className="text-[10px] font-medium text-[#8B4513] bg-[#8B4513]/5 px-2 py-0.5 rounded-[12px] border border-[#8B4513]/10">CGPA</span>
+                <span className="text-[10px] font-medium uppercase tracking-wider text-[#ffffff]/60">Cumulative Index</span>
+                <span className="text-[10px] font-medium text-[#00ffcc] bg-[#00ffcc]/5 px-2 py-0.5 rounded-[12px] border border-[#00ffcc]/10">CGPA</span>
               </div>
               <div>
-                <p className="text-3xl font-normal tracking-[-0.02em] text-[#3D2B1F]">9.35</p>
-                <p className="text-xs text-[#3D2B1F]/70 mt-1 leading-[1.6]">Overall academic status vector</p>
+                <p className="text-3xl font-normal tracking-[-0.02em] text-[#ffffff]">9.35</p>
+                <p className="text-xs text-[#ffffff]/70 mt-1 leading-[1.6]">Overall academic status vector</p>
               </div>
-              <div className="h-1 w-full bg-[#F9F5F0] rounded-full mt-[16px] overflow-hidden border border-[#8B4513]/10">
-                <div className="h-full bg-[#8B4513]" style={{ width: '93.5%' }}></div>
+              <div className="h-1 w-full bg-[#0d0d0d] rounded-full mt-[16px] overflow-hidden border border-[#00ffcc]/10">
+                <div className="h-full bg-[#00ffcc]" style={{ width: '93.5%' }}></div>
               </div>
             </motion.div>
 
-            <motion.div variants={cardVariants} initial="hidden" animate="visible" transition={{ delay: 0.1 }} className="bg-white border border-[#8B4513]/20 rounded-[12px] p-[24px] flex flex-col justify-between shadow-none">
+            <motion.div variants={cardVariants} initial="hidden" animate="visible" transition={{ delay: 0.1 }} className="bg-[#141414] border border-[#00ffcc]/20 rounded-[12px] p-[24px] flex flex-col justify-between shadow-none">
               <div className="flex items-center justify-between mb-[16px]">
-                <span className="text-[10px] font-medium uppercase tracking-wider text-[#3D2B1F]/60">Active Term Index</span>
+                <span className="text-[10px] font-medium uppercase tracking-wider text-[#ffffff]/60">Active Term Index</span>
                 <span className="text-[10px] font-medium text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-[12px] border border-emerald-200">SGPA</span>
               </div>
               <div>
-                <p className="text-3xl font-normal tracking-[-0.02em] text-[#3D2B1F]">{activeSemData.sgpa}</p>
-                <p className="text-xs text-[#3D2B1F]/70 mt-1 leading-[1.6]">Current target evaluation metric</p>
+                <p className="text-3xl font-normal tracking-[-0.02em] text-[#ffffff]">{activeSemData.sgpa}</p>
+                <p className="text-xs text-[#ffffff]/70 mt-1 leading-[1.6]">Current target evaluation metric</p>
               </div>
-              <div className="h-1 w-full bg-[#F9F5F0] rounded-full mt-[16px] overflow-hidden border border-[#8B4513]/10">
+              <div className="h-1 w-full bg-[#0d0d0d] rounded-full mt-[16px] overflow-hidden border border-[#00ffcc]/10">
                 <div className="h-full bg-emerald-700" style={{ width: `${parseFloat(activeSemData.sgpa) * 10}%` }}></div>
               </div>
             </motion.div>
 
-            <motion.div variants={cardVariants} initial="hidden" animate="visible" transition={{ delay: 0.2 }} className="bg-white border border-[#8B4513]/20 rounded-[12px] p-[24px] flex flex-col justify-between shadow-none">
+            <motion.div variants={cardVariants} initial="hidden" animate="visible" transition={{ delay: 0.2 }} className="bg-[#141414] border border-[#00ffcc]/20 rounded-[12px] p-[24px] flex flex-col justify-between shadow-none">
               <div className="flex items-center justify-between mb-[16px]">
-                <span className="text-[10px] font-medium uppercase tracking-wider text-[#3D2B1F]/60">Verified Attendance</span>
-                <span className="text-[10px] font-medium text-[#8B4513] bg-[#8B4513]/5 px-2 py-0.5 rounded-[12px] border border-[#8B4513]/10">KPI</span>
+                <span className="text-[10px] font-medium uppercase tracking-wider text-[#ffffff]/60">Verified Attendance</span>
+                <span className="text-[10px] font-medium text-[#00ffcc] bg-[#00ffcc]/5 px-2 py-0.5 rounded-[12px] border border-[#00ffcc]/10">KPI</span>
               </div>
               <div>
-                <p className="text-3xl font-normal tracking-[-0.02em] text-[#3D2B1F]">{activeSemData.attendance}</p>
-                <p className="text-xs text-[#3D2B1F]/70 mt-1 leading-[1.6]">Workspace presence verification</p>
+                <p className="text-3xl font-normal tracking-[-0.02em] text-[#ffffff]">{activeSemData.attendance}</p>
+                <p className="text-xs text-[#ffffff]/70 mt-1 leading-[1.6]">Workspace presence verification</p>
               </div>
-              <div className="h-1 w-full bg-[#F9F5F0] rounded-full mt-[16px] overflow-hidden border border-[#8B4513]/10">
-                <div className="h-full bg-[#8B4513]" style={{ width: activeSemData.attendance }}></div>
+              <div className="h-1 w-full bg-[#0d0d0d] rounded-full mt-[16px] overflow-hidden border border-[#00ffcc]/10">
+                <div className="h-full bg-[#00ffcc]" style={{ width: activeSemData.attendance }}></div>
               </div>
             </motion.div>
 
-            <motion.div variants={cardVariants} initial="hidden" animate="visible" transition={{ delay: 0.3 }} className="bg-white border border-[#8B4513]/20 rounded-[12px] p-[24px] flex flex-col justify-between shadow-none">
+            <motion.div variants={cardVariants} initial="hidden" animate="visible" transition={{ delay: 0.3 }} className="bg-[#141414] border border-[#00ffcc]/20 rounded-[12px] p-[24px] flex flex-col justify-between shadow-none">
               <div className="flex items-center justify-between mb-[16px]">
-                <span className="text-[10px] font-medium uppercase tracking-wider text-[#3D2B1F]/60">Cleared Component</span>
-                <span className="text-[10px] font-medium text-[#8B4513] bg-[#8B4513]/5 px-2 py-0.5 rounded-[12px] border border-[#8B4513]/10">Credits</span>
+                <span className="text-[10px] font-medium uppercase tracking-wider text-[#ffffff]/60">Cleared Component</span>
+                <span className="text-[10px] font-medium text-[#00ffcc] bg-[#00ffcc]/5 px-2 py-0.5 rounded-[12px] border border-[#00ffcc]/10">Credits</span>
               </div>
               <div>
-                <p className="text-3xl font-normal tracking-[-0.02em] text-[#3D2B1F]">{activeSemData.creditsCleared.split('/')[0].trim()}</p>
-                <p className="text-xs text-[#3D2B1F]/70 mt-1 leading-[1.6]">Accredited study points confirmed</p>
+                <p className="text-3xl font-normal tracking-[-0.02em] text-[#ffffff]">{activeSemData.creditsCleared.split('/')[0].trim()}</p>
+                <p className="text-xs text-[#ffffff]/70 mt-1 leading-[1.6]">Accredited study points confirmed</p>
               </div>
               <div className="flex items-center gap-1 mt-[16px] text-[10px] font-medium text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-[12px] w-fit border border-emerald-200">
                 <ShieldCheck size={12} /> Fully Aligned
@@ -395,11 +395,11 @@ export default function PerformanceReportCardPage() {
           {/* Interactive Term Switcher Navigation Header */}
           <div className="space-y-[16px]">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-[8px]">
-              <h3 className="text-xl font-normal tracking-[-0.02em] text-[#3D2B1F]">Historical Report Ledgers</h3>
-              <p className="text-xs text-[#3D2B1F]/70">Select term tabs below to parse evaluation subsets</p>
+              <h3 className="text-xl font-normal tracking-[-0.02em] text-[#ffffff]">Historical Report Ledgers</h3>
+              <p className="text-xs text-[#ffffff]/70">Select term tabs below to parse evaluation subsets</p>
             </div>
 
-            <div className="flex items-center gap-[16px] overflow-x-auto pb-2 scrollbar-none border-b border-[#8B4513]/10">
+            <div className="flex items-center gap-[16px] overflow-x-auto pb-2 scrollbar-none border-b border-[#00ffcc]/10">
               {RCD.map((sem) => {
                 const isSelected = sem.id === activeSemesterId;
                 return (
@@ -411,19 +411,19 @@ export default function PerformanceReportCardPage() {
                     onClick={() => setActiveSemesterId(sem.id)}
                     className={`pb-3 text-xs font-medium transition-colors relative shrink-0 flex items-center gap-2 ${
                       isSelected 
-                        ? "text-[#8B4513] font-semibold" 
-                        : "text-[#3D2B1F]/60 hover:text-[#3D2B1F]"
+                        ? "text-[#00ffcc] font-semibold" 
+                        : "text-[#ffffff]/60 hover:text-[#ffffff]"
                     }`}
                   >
-                    <Calendar size={12} className={isSelected ? "text-[#8B4513]" : "text-[#3D2B1F]/40"} />
+                    <Calendar size={12} className={isSelected ? "text-[#00ffcc]" : "text-[#ffffff]/40"} />
                     <span>{sem.term}</span>
-                    <span className={`text-[9px] px-1.5 py-0.2 rounded-[8px] border ${isSelected ? "bg-[#8B4513]/5 text-[#8B4513] border-[#8B4513]/20" : "bg-white text-[#3D2B1F]/60 border-[#8B4513]/10"}`}>
+                    <span className={`text-[9px] px-1.5 py-0.2 rounded-[8px] border ${isSelected ? "bg-[#00ffcc]/5 text-[#00ffcc] border-[#00ffcc]/20" : "bg-[#141414] text-[#ffffff]/60 border-[#00ffcc]/10"}`}>
                       {sem.sgpa}
                     </span>
                     {isSelected && (
                       <motion.div 
                         layoutId="activeTabUnderline"
-                        className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#8B4513]" 
+                        className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#00ffcc]" 
                         transition={{ type: "spring", stiffness: 400, damping: 25 }}
                       />
                     )}
@@ -451,11 +451,11 @@ function SidebarItem({ icon, label, active, onClick }: { icon: React.ReactNode, 
       onClick={onClick}
       className={`w-full flex items-center gap-3 px-4 min-h-[40px] rounded-[12px] text-xs font-medium transition-colors ${
         active 
-        ? "bg-[#8B4513]/5 text-[#8B4513] border border-[#8B4513]/10 font-semibold" 
-        : "text-[#3D2B1F]/70 hover:bg-[#8B4513]/5 hover:text-[#3D2B1F]"
+        ? "bg-[#00ffcc]/5 text-[#00ffcc] border border-[#00ffcc]/10 font-semibold" 
+        : "text-[#ffffff]/70 hover:bg-[#00ffcc]/5 hover:text-[#ffffff]"
       }`}
     >
-      <span className="text-[#8B4513]">{icon}</span>
+      <span className="text-[#00ffcc]">{icon}</span>
       {label}
     </motion.button>
   );

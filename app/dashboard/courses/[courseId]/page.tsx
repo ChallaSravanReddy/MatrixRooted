@@ -247,7 +247,7 @@ export default function CourseDetailPage() {
             }
           }
         },
-        theme: { color: "#8B4513" },
+        theme: { color: "#00ffcc" },
         modal: {
           ondismiss: () => setEnrollLoading(false),
           escape: true
@@ -327,15 +327,15 @@ export default function CourseDetailPage() {
   const isCurrentLessonCompleted = currentLesson ? completedLessonIds.includes(currentLesson.id) : false;
 
   const renderSyllabus = () => (
-    <div className="bg-white border border-[#8B4513]/20 rounded-[12px] p-[24px] shadow-none space-y-[24px]">
-      <div className="border-b border-[#8B4513]/10 pb-[16px] flex items-center justify-between">
+    <div className="bg-[#141414] border border-[#00ffcc]/20 rounded-[12px] p-[24px] shadow-none space-y-[24px]">
+      <div className="border-b border-[#00ffcc]/10 pb-[16px] flex items-center justify-between">
         <div>
-          <h2 className="text-base font-bold text-[#3D2B1F]">Course Modules & Syllabus</h2>
-          <p className="text-xs text-[#3D2B1F]/60 mt-0.5 font-medium">{lessons.length} Learning Sessions</p>
+          <h2 className="text-base font-bold text-[#ffffff]">Course Modules & Syllabus</h2>
+          <p className="text-xs text-[#ffffff]/60 mt-0.5 font-medium">{lessons.length} Learning Sessions</p>
         </div>
         {!isEnrolled && (
           <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 400, damping: 25 }}>
-            <Button size="sm" onClick={() => setShowPayment(true)} className="bg-[#D2B48C] hover:bg-[#C1A37B] text-[#3D2B1F] text-xs font-bold rounded-[8px] h-8 shadow-none">
+            <Button size="sm" onClick={() => setShowPayment(true)} className="bg-[#00ffcc] hover:bg-[#00e6b8] text-[#ffffff] text-xs font-bold rounded-[8px] h-8 shadow-none">
               Enroll Track
             </Button>
           </motion.div>
@@ -348,26 +348,26 @@ export default function CourseDetailPage() {
           const isOpen = String(openModuleId) === String(mod.id);
 
           return (
-            <div key={mod.id} className="space-y-[8px] border-b border-[#8B4513]/5 pb-3 last:border-0">
+            <div key={mod.id} className="space-y-[8px] border-b border-[#00ffcc]/5 pb-3 last:border-0">
               {/* Module Dropdown Trigger Header */}
               <button
                 onClick={() => toggleModule(mod.id)}
-                className="w-full flex items-center justify-between px-3 py-2.5 bg-[#F9F5F0]/60 hover:bg-[#F9F5F0] text-[#3D2B1F] rounded-[8px] transition-colors text-left group border border-[#8B4513]/5"
+                className="w-full flex items-center justify-between px-3 py-2.5 bg-[#0d0d0d]/60 hover:bg-[#0d0d0d] text-[#ffffff] rounded-[8px] transition-colors text-left group border border-[#00ffcc]/5"
               >
                 <div className="flex items-center gap-2 min-w-0 pr-2">
-                  <span className="text-xs font-bold text-[#3D2B1F] truncate">{mod.title}</span>
-                  {mod.has_assessment && <span className="text-[9px] font-bold text-[#8B4513] bg-[#8B4513]/5 px-2 py-0.2 rounded-[4px] border border-[#8B4513]/10 shrink-0">Assignment</span>}
+                  <span className="text-xs font-bold text-[#ffffff] truncate">{mod.title}</span>
+                  {mod.has_assessment && <span className="text-[9px] font-bold text-[#00ffcc] bg-[#00ffcc]/5 px-2 py-0.2 rounded-[4px] border border-[#00ffcc]/10 shrink-0">Assignment</span>}
                 </div>
-                <div className="shrink-0 transition-transform duration-200 text-[#8B4513]" style={{ transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)' }}>
+                <div className="shrink-0 transition-transform duration-200 text-[#00ffcc]" style={{ transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)' }}>
                   <ChevronRight size={14} />
                 </div>
               </button>
 
               {/* Collapsible Dropdown Lessons Container */}
               {isOpen && (
-                <div className="space-y-1 pl-2 pt-1 border-l border-[#8B4513]/10 ml-2 animate-in fade-in-50 duration-200">
+                <div className="space-y-1 pl-2 pt-1 border-l border-[#00ffcc]/10 ml-2 animate-in fade-in-50 duration-200">
                   {modLessons.length === 0 ? (
-                    <div className="text-[10px] text-[#3D2B1F]/40 italic px-2 py-1">Lessons pending upload.</div>
+                    <div className="text-[10px] text-[#ffffff]/40 italic px-2 py-1">Lessons pending upload.</div>
                   ) : (
                     modLessons.map((lesson) => {
                       const isActive = currentLesson?.id === lesson.id;
@@ -384,36 +384,36 @@ export default function CourseDetailPage() {
                             }
                           }}
                           className={`w-full flex items-center gap-2.5 p-2 rounded-[6px] text-left transition-colors group ${isActive
-                              ? "bg-[#8B4513]/5 text-[#8B4513] font-bold border border-[#8B4513]/10"
+                              ? "bg-[#00ffcc]/5 text-[#00ffcc] font-bold border border-[#00ffcc]/10"
                               : isLocked
-                                ? "opacity-40 cursor-not-allowed text-[#3D2B1F]/50"
-                                : "hover:bg-white text-[#3D2B1F]/80 font-medium"
+                                ? "opacity-40 cursor-not-allowed text-[#ffffff]/50"
+                                : "hover:bg-[#141414] text-[#ffffff]/80 font-medium"
                             }`}
                         >
                           <div className="shrink-0">
                             {isLocked ? (
-                              <ShieldCheck size={12} className={isActive ? "text-[#8B4513]" : "text-[#3D2B1F]/40"} />
+                              <ShieldCheck size={12} className={isActive ? "text-[#00ffcc]" : "text-[#ffffff]/40"} />
                             ) : isDone ? (
-                              <CheckCircle2 size={12} className={isActive ? "text-[#8B4513]" : "text-emerald-800"} />
+                              <CheckCircle2 size={12} className={isActive ? "text-[#00ffcc]" : "text-emerald-800"} />
                             ) : isActive ? (
-                              <Play size={12} className="text-[#8B4513] fill-current" />
+                              <Play size={12} className="text-[#00ffcc] fill-current" />
                             ) : (
-                              <Circle size={12} className="text-[#3D2B1F]/30" />
+                              <Circle size={12} className="text-[#ffffff]/30" />
                             )}
                           </div>
 
                           <div className="flex-1 min-w-0 pr-2">
-                            <h4 className={`text-xs truncate ${isActive ? "text-[#8B4513] font-bold" : "text-[#3D2B1F]"}`}>
+                            <h4 className={`text-xs truncate ${isActive ? "text-[#00ffcc] font-bold" : "text-[#ffffff]"}`}>
                               {lesson.title}
                             </h4>
                             <div className="flex items-center gap-2 mt-0.5">
-                              {lesson.notes && <span className="text-[9px] font-medium text-[#3D2B1F]/40">📝 Notes</span>}
-                              {lesson.content_url && <span className="text-[9px] font-medium text-[#3D2B1F]/40">🎥 Video</span>}
-                              {lesson.is_preview && <span className="text-[9px] font-bold text-[#8B4513]">Free Preview</span>}
-                              {(lesson.has_assignment || mod.has_assessment) && <span className="text-[9px] font-bold text-[#8B4513]">Task</span>}
+                              {lesson.notes && <span className="text-[9px] font-medium text-[#ffffff]/40">📝 Notes</span>}
+                              {lesson.content_url && <span className="text-[9px] font-medium text-[#ffffff]/40">🎥 Video</span>}
+                              {lesson.is_preview && <span className="text-[9px] font-bold text-[#00ffcc]">Free Preview</span>}
+                              {(lesson.has_assignment || mod.has_assessment) && <span className="text-[9px] font-bold text-[#00ffcc]">Task</span>}
                             </div>
                           </div>
-                          {isActive && <div className="w-1 h-1 rounded-full bg-[#8B4513] shrink-0"></div>}
+                          {isActive && <div className="w-1 h-1 rounded-full bg-[#00ffcc] shrink-0"></div>}
                         </button>
                       );
                     })
@@ -431,19 +431,19 @@ export default function CourseDetailPage() {
           const isOpen = openModuleId === "general";
 
           return (
-            <div className="space-y-[8px] pt-2 border-t border-[#8B4513]/10">
+            <div className="space-y-[8px] pt-2 border-t border-[#00ffcc]/10">
               <button
                 onClick={() => setOpenModuleId(prev => prev === "general" ? null : "general")}
-                className="w-full flex items-center justify-between px-3 py-2 bg-[#F9F5F0]/30 hover:bg-[#F9F5F0]/60 text-[#3D2B1F]/80 font-bold rounded-[8px] transition-colors text-left"
+                className="w-full flex items-center justify-between px-3 py-2 bg-[#0d0d0d]/30 hover:bg-[#0d0d0d]/60 text-[#ffffff]/80 font-bold rounded-[8px] transition-colors text-left"
               >
                 <span className="text-[10px] uppercase tracking-wider">General Course Classes</span>
-                <div className="shrink-0 transition-transform duration-200 text-[#8B4513]" style={{ transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)' }}>
+                <div className="shrink-0 transition-transform duration-200 text-[#00ffcc]" style={{ transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)' }}>
                   <ChevronRight size={14} />
                 </div>
               </button>
 
               {isOpen && (
-                <div className="space-y-1 pl-2 pt-1 border-l border-[#8B4513]/10 ml-2 animate-in fade-in-50 duration-200">
+                <div className="space-y-1 pl-2 pt-1 border-l border-[#00ffcc]/10 ml-2 animate-in fade-in-50 duration-200">
                   {unassigned.map((lesson) => {
                     const isActive = currentLesson?.id === lesson.id;
                     const isLocked = !isEnrolled && !lesson.is_preview;
@@ -459,36 +459,36 @@ export default function CourseDetailPage() {
                           }
                         }}
                         className={`w-full flex items-center gap-2.5 p-2 rounded-[6px] text-left transition-colors group ${isActive
-                            ? "bg-[#8B4513]/5 text-[#8B4513] font-bold border border-[#8B4513]/10"
+                            ? "bg-[#00ffcc]/5 text-[#00ffcc] font-bold border border-[#00ffcc]/10"
                             : isLocked
-                              ? "opacity-40 cursor-not-allowed text-[#3D2B1F]/50"
-                              : "hover:bg-white text-[#3D2B1F]/80 font-medium"
+                              ? "opacity-40 cursor-not-allowed text-[#ffffff]/50"
+                              : "hover:bg-[#141414] text-[#ffffff]/80 font-medium"
                           }`}
                       >
                         <div className="shrink-0">
                           {isLocked ? (
-                            <ShieldCheck size={12} className={isActive ? "text-[#8B4513]" : "text-[#3D2B1F]/40"} />
+                            <ShieldCheck size={12} className={isActive ? "text-[#00ffcc]" : "text-[#ffffff]/40"} />
                           ) : isDone ? (
-                            <CheckCircle2 size={12} className={isActive ? "text-[#8B4513]" : "text-emerald-800"} />
+                            <CheckCircle2 size={12} className={isActive ? "text-[#00ffcc]" : "text-emerald-800"} />
                           ) : isActive ? (
-                            <Play size={12} className="text-[#8B4513] fill-current" />
+                            <Play size={12} className="text-[#00ffcc] fill-current" />
                           ) : (
-                            <Circle size={12} className="text-[#3D2B1F]/30" />
+                            <Circle size={12} className="text-[#ffffff]/30" />
                           )}
                         </div>
 
                         <div className="flex-1 min-w-0 pr-2">
-                          <h4 className={`text-xs truncate ${isActive ? "text-[#8B4513] font-bold" : "text-[#3D2B1F]"}`}>
+                          <h4 className={`text-xs truncate ${isActive ? "text-[#00ffcc] font-bold" : "text-[#ffffff]"}`}>
                             {lesson.title}
                           </h4>
                           <div className="flex items-center gap-2 mt-0.5">
-                            {lesson.notes && <span className="text-[9px] text-[#3D2B1F]/40">📝 Docs</span>}
-                            {lesson.content_url && <span className="text-[9px] text-[#3D2B1F]/40">🎥 Stream</span>}
-                            {lesson.is_preview && <span className="text-[9px] font-bold text-[#8B4513]">Free Preview</span>}
-                            {lesson.has_assignment && <span className="text-[9px] font-bold text-[#8B4513]">Task</span>}
+                            {lesson.notes && <span className="text-[9px] text-[#ffffff]/40">📝 Docs</span>}
+                            {lesson.content_url && <span className="text-[9px] text-[#ffffff]/40">🎥 Stream</span>}
+                            {lesson.is_preview && <span className="text-[9px] font-bold text-[#00ffcc]">Free Preview</span>}
+                            {lesson.has_assignment && <span className="text-[9px] font-bold text-[#00ffcc]">Task</span>}
                           </div>
                         </div>
-                        {isActive && <div className="w-1 h-1 rounded-full bg-[#8B4513] shrink-0"></div>}
+                        {isActive && <div className="w-1 h-1 rounded-full bg-[#00ffcc] shrink-0"></div>}
                       </button>
                     );
                   })}
@@ -499,7 +499,7 @@ export default function CourseDetailPage() {
         })()}
 
         {lessons.length === 0 && (
-          <div className="text-xs text-[#3D2B1F]/40 italic text-center py-4 font-medium">No learning curriculum configured yet.</div>
+          <div className="text-xs text-[#ffffff]/40 italic text-center py-4 font-medium">No learning curriculum configured yet.</div>
         )}
       </div>
     </div>
@@ -508,9 +508,9 @@ export default function CourseDetailPage() {
   const renderNotesAndAssessment = () => (
     <div className="space-y-[32px]">
       {/* Title & Metadata Section */}
-      <div className="space-y-[16px] border-b border-[#8B4513]/10 pb-[16px]">
+      <div className="space-y-[16px] border-b border-[#00ffcc]/10 pb-[16px]">
         <div className="flex flex-wrap items-center justify-between gap-[16px]">
-          <h1 className="text-xl md:text-2xl font-bold text-[#3D2B1F] leading-tight">
+          <h1 className="text-xl md:text-2xl font-bold text-[#ffffff] leading-tight">
             {currentLesson?.title}
           </h1>
           {isCurrentLessonCompleted && (
@@ -522,49 +522,49 @@ export default function CourseDetailPage() {
         </div>
 
         <div className="flex flex-wrap items-center gap-[8px]">
-          {currentLesson?.notes && <span className="text-[10px] font-bold bg-[#8B4513]/5 text-[#8B4513] px-2.5 py-0.5 rounded-[6px] border border-[#8B4513]/10 flex items-center gap-1"><FileText size={10} /> Reading Notes Available</span>}
+          {currentLesson?.notes && <span className="text-[10px] font-bold bg-[#00ffcc]/5 text-[#00ffcc] px-2.5 py-0.5 rounded-[6px] border border-[#00ffcc]/10 flex items-center gap-1"><FileText size={10} /> Reading Notes Available</span>}
           {requiresAssessment && <span className="text-[10px] font-bold bg-amber-50 text-amber-800 px-2.5 py-0.5 rounded-[6px] border border-amber-200 flex items-center gap-1">⚠️ Required Project Assignment</span>}
         </div>
       </div>
 
       {/* Comprehensive Text Notes Rendering */}
       {currentLesson?.notes ? (
-        <div className="space-y-[16px] bg-white border border-[#8B4513]/20 rounded-[12px] p-[24px] md:p-[32px] shadow-none max-w-none">
-          <h3 className="text-xs font-bold text-[#8B4513] uppercase tracking-wider flex items-center gap-2 border-b border-[#8B4513]/10 pb-2">
+        <div className="space-y-[16px] bg-[#141414] border border-[#00ffcc]/20 rounded-[12px] p-[24px] md:p-[32px] shadow-none max-w-none">
+          <h3 className="text-xs font-bold text-[#00ffcc] uppercase tracking-wider flex items-center gap-2 border-b border-[#00ffcc]/10 pb-2">
             <BookOpen size={14} />
             <span>Lecture Notes & Class References</span>
           </h3>
-          <div className="text-xs md:text-sm leading-[1.6] whitespace-pre-wrap text-[#3D2B1F]/90 font-medium">
+          <div className="text-xs md:text-sm leading-[1.6] whitespace-pre-wrap text-[#ffffff]/90 font-medium">
             {currentLesson.notes}
           </div>
         </div>
       ) : (
-        <div className="text-xs text-[#3D2B1F]/50 italic py-2 font-medium">No accompanying text study guides loaded for this video stream.</div>
+        <div className="text-xs text-[#ffffff]/50 italic py-2 font-medium">No accompanying text study guides loaded for this video stream.</div>
       )}
 
       {/* Assignment / Assessment Submission Section */}
       {requiresAssessment && (
-        <div className="bg-white border border-[#8B4513]/20 rounded-[12px] p-[24px] md:p-[32px] shadow-none space-y-[24px]">
-          <h2 className="text-base font-bold flex items-center gap-2 text-[#3D2B1F] border-b border-[#8B4513]/10 pb-2">
-            <Award className="w-4 h-4 text-[#8B4513] shrink-0" />
+        <div className="bg-[#141414] border border-[#00ffcc]/20 rounded-[12px] p-[24px] md:p-[32px] shadow-none space-y-[24px]">
+          <h2 className="text-base font-bold flex items-center gap-2 text-[#ffffff] border-b border-[#00ffcc]/10 pb-2">
+            <Award className="w-4 h-4 text-[#00ffcc] shrink-0" />
             Project Assignment Submission
           </h2>
 
           <div className="space-y-[16px]">
             <div className="space-y-1.5">
-              <label className="text-xs font-bold text-[#3D2B1F]/70 block">
+              <label className="text-xs font-bold text-[#ffffff]/70 block">
                 Deliverable Link URL {parentModule?.has_assessment ? "(Module Task)" : "(Lesson Task)"}
               </label>
               <textarea
                 value={assignmentUrl}
                 onChange={(e) => setAssignmentUrl(e.target.value)}
                 placeholder="Paste your active solution link (GitHub repo, live deployed site, or code sandbox)..."
-                className="w-full bg-[#F9F5F0] border border-[#8B4513]/20 focus:border-[#8B4513] rounded-[8px] p-3 text-[#3D2B1F] text-xs transition-all min-h-[80px] resize-y outline-none font-medium"
+                className="w-full bg-[#0d0d0d] border border-[#00ffcc]/20 focus:border-[#00ffcc] rounded-[8px] p-3 text-[#ffffff] text-xs transition-all min-h-[80px] resize-y outline-none font-medium"
               />
             </div>
 
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-[16px] pt-1">
-              <p className="text-xs text-[#3D2B1F]/60 max-w-xs leading-[1.6] font-medium">
+              <p className="text-xs text-[#ffffff]/60 max-w-xs leading-[1.6] font-medium">
                 Submitting your output commits variables to the active study tracker to update course grading markers.
               </p>
 
@@ -572,7 +572,7 @@ export default function CourseDetailPage() {
                 <Button
                   onClick={() => handleCompleteLesson()}
                   disabled={submitting || !assignmentUrl.trim()}
-                  className="px-5 h-10 rounded-[8px] font-bold text-xs bg-[#D2B48C] text-[#3D2B1F] hover:bg-[#C1A37B] shadow-none"
+                  className="px-5 h-10 rounded-[8px] font-bold text-xs bg-[#00ffcc] text-[#ffffff] hover:bg-[#00e6b8] shadow-none"
                 >
                   {submitting ? (
                     <span>Saving Grade...</span>
@@ -589,7 +589,7 @@ export default function CourseDetailPage() {
       )}
 
       {/* Dedicated Lesson Cycling & Navigation Actions */}
-      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-[16px] pt-[16px] border-t border-[#8B4513]/10">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-[16px] pt-[16px] border-t border-[#00ffcc]/10">
         {prevLesson ? (
           <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 400, damping: 25 }}>
             <Button
@@ -598,9 +598,9 @@ export default function CourseDetailPage() {
                 setCurrentLesson(prevLesson);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="px-4 h-9 border-[#8B4513]/20 font-bold text-xs rounded-[8px] shadow-none text-[#3D2B1F]/80"
+              className="px-4 h-9 border-[#00ffcc]/20 font-bold text-xs rounded-[8px] shadow-none text-[#ffffff]/80"
             >
-              <ArrowLeft size={12} className="mr-2 text-[#8B4513]" />
+              <ArrowLeft size={12} className="mr-2 text-[#00ffcc]" />
               <span className="truncate max-w-[150px]">Previous: {prevLesson.title}</span>
             </Button>
           </motion.div>
@@ -616,17 +616,17 @@ export default function CourseDetailPage() {
                 setCurrentLesson(nextLesson);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="px-6 h-9 bg-[#D2B48C] hover:bg-[#C1A37B] text-[#3D2B1F] font-bold text-xs rounded-[8px] shadow-none"
+              className="px-6 h-9 bg-[#00ffcc] hover:bg-[#00e6b8] text-[#ffffff] font-bold text-xs rounded-[8px] shadow-none"
             >
               <span className="truncate max-w-[150px] mr-2">Next Lesson: {nextLesson.title}</span>
-              <Play size={10} className="fill-current text-[#3D2B1F]" />
+              <Play size={10} className="fill-current text-[#ffffff]" />
             </Button>
           </motion.div>
         ) : (
           <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 400, damping: 25 }}>
             <Button
               onClick={() => window.location.href = '/dashboard'}
-              className="px-6 h-9 bg-[#8B4513]/10 hover:bg-[#8B4513]/20 text-[#8B4513] font-bold text-xs rounded-[8px] shadow-none border border-[#8B4513]/20"
+              className="px-6 h-9 bg-[#00ffcc]/10 hover:bg-[#00ffcc]/20 text-[#00ffcc] font-bold text-xs rounded-[8px] shadow-none border border-[#00ffcc]/20"
             >
               <CheckCircle2 size={12} className="mr-2" />
               Complete Course Program
@@ -641,32 +641,32 @@ export default function CourseDetailPage() {
   const isLocked = !isEnrolled && !currentLesson?.is_preview;
 
   return (
-    <div className="flex flex-col h-screen bg-[#F9F5F0] text-[#3D2B1F] font-sans overflow-hidden">
+    <div className="flex flex-col h-screen bg-[#0d0d0d] text-[#ffffff] font-sans overflow-hidden">
       <Script src="https://checkout.razorpay.com/v1/checkout.js" strategy="afterInteractive" />
 
       {/* Top Navigation Bar */}
-      <header className="flex-shrink-0 h-16 border-b border-[#8B4513]/10 bg-white flex items-center px-6 justify-between z-10 shadow-none">
+      <header className="flex-shrink-0 h-16 border-b border-[#00ffcc]/10 bg-[#141414] flex items-center px-6 justify-between z-10 shadow-none">
         <div className="flex items-center gap-4">
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition={{ type: "spring", stiffness: 400, damping: 25 }}>
-            <Button variant="outline" size="icon" onClick={() => window.location.href = '/dashboard'} className="rounded-[8px] h-8 w-8 border-[#8B4513]/20 shadow-none">
-              <ArrowLeft size={16} className="text-[#8B4513]" />
+            <Button variant="outline" size="icon" onClick={() => window.location.href = '/dashboard'} className="rounded-[8px] h-8 w-8 border-[#00ffcc]/20 shadow-none">
+              <ArrowLeft size={16} className="text-[#00ffcc]" />
             </Button>
           </motion.div>
-          <div className="hidden sm:block h-3 w-px bg-[#8B4513]/10 mx-1" />
-          <h1 className="text-xs font-bold text-[#3D2B1F] truncate max-w-[250px] md:max-w-none">
+          <div className="hidden sm:block h-3 w-px bg-[#00ffcc]/10 mx-1" />
+          <h1 className="text-xs font-bold text-[#ffffff] truncate max-w-[250px] md:max-w-none">
             {course?.title || "Learning Studio Player"}
           </h1>
           {parentModule && (
             <>
-              <div className="hidden sm:block h-3 w-px bg-[#8B4513]/10 mx-1" />
-              <span className="hidden md:inline-flex text-[10px] font-bold bg-[#8B4513]/5 text-[#8B4513] px-2.5 py-0.5 rounded-[6px] border border-[#8B4513]/10 truncate max-w-xs">
+              <div className="hidden sm:block h-3 w-px bg-[#00ffcc]/10 mx-1" />
+              <span className="hidden md:inline-flex text-[10px] font-bold bg-[#00ffcc]/5 text-[#00ffcc] px-2.5 py-0.5 rounded-[6px] border border-[#00ffcc]/10 truncate max-w-xs">
                 {parentModule.title}
               </span>
             </>
           )}
         </div>
         <div className="flex items-center gap-4">
-          <div className="hidden md:flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-[#8B4513] bg-[#8B4513]/5 border border-[#8B4513]/10 px-2.5 py-0.5 rounded-[6px]">
+          <div className="hidden md:flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-[#00ffcc] bg-[#00ffcc]/5 border border-[#00ffcc]/10 px-2.5 py-0.5 rounded-[6px]">
             <ShieldCheck size={12} />
             Verified Academy Course
           </div>
@@ -676,7 +676,7 @@ export default function CourseDetailPage() {
       {/* Main Studio Area */}
       <div className="flex-1 lg:overflow-hidden p-[24px] md:p-[40px] md:pt-[24px] max-w-[1600px] w-full mx-auto overflow-y-auto">
         {!currentLesson ? (
-          <div className="py-20 text-center text-xs text-[#3D2B1F]/60 font-bold">Resolving active syllabus coordinates...</div>
+          <div className="py-20 text-center text-xs text-[#ffffff]/60 font-bold">Resolving active syllabus coordinates...</div>
         ) : hasVideo ? (
           /* SCENARIO A: Has Video */
           <div className="grid lg:grid-cols-12 gap-[32px] items-start lg:h-full">
@@ -684,20 +684,20 @@ export default function CourseDetailPage() {
             {/* Left Side: Video + Syllabus Below */}
             <div className="lg:col-span-5 xl:col-span-5 flex flex-col lg:h-full space-y-[24px] min-h-0">
               {/* Wraps YouTube iframe in overflow: hidden container using absolute absolute inset layout */}
-              <div className="w-full aspect-video bg-[#F9F5F0] rounded-[12px] overflow-hidden border border-[#8B4513]/20 relative shadow-none shrink-0">
+              <div className="w-full aspect-video bg-[#0d0d0d] rounded-[12px] overflow-hidden border border-[#00ffcc]/20 relative shadow-none shrink-0">
                 {isLocked ? (
-                  <div className="w-full h-full bg-white flex flex-col items-center justify-center p-6 text-center space-y-4 absolute inset-0 z-10">
-                    <div className="w-12 h-12 bg-[#8B4513]/5 rounded-full flex items-center justify-center border border-[#8B4513]/10">
-                      <ShieldCheck size={24} className="text-[#8B4513]" />
+                  <div className="w-full h-full bg-[#141414] flex flex-col items-center justify-center p-6 text-center space-y-4 absolute inset-0 z-10">
+                    <div className="w-12 h-12 bg-[#00ffcc]/5 rounded-full flex items-center justify-center border border-[#00ffcc]/10">
+                      <ShieldCheck size={24} className="text-[#00ffcc]" />
                     </div>
                     <div>
-                      <h3 className="text-base font-bold text-[#3D2B1F]">Course Access Locked</h3>
-                      <p className="text-xs text-[#3D2B1F]/70 max-w-xs mx-auto mt-1 leading-[1.6] font-medium">Unlock full lecture recordings and study projects instantly.</p>
+                      <h3 className="text-base font-bold text-[#ffffff]">Course Access Locked</h3>
+                      <p className="text-xs text-[#ffffff]/70 max-w-xs mx-auto mt-1 leading-[1.6] font-medium">Unlock full lecture recordings and study projects instantly.</p>
                     </div>
                     <Button
                       size="sm"
                       onClick={() => setShowPayment(true)}
-                      className="px-5 py-2 bg-[#D2B48C] text-[#3D2B1F] hover:bg-[#C1A37B] font-bold text-xs rounded-[8px] shadow-none"
+                      className="px-5 py-2 bg-[#00ffcc] text-[#ffffff] hover:bg-[#00e6b8] font-bold text-xs rounded-[8px] shadow-none"
                     >
                       Enroll to Access Lessons
                     </Button>
@@ -707,19 +707,19 @@ export default function CourseDetailPage() {
                     {!isPlaying && (
                       <div
                         onClick={() => setIsPlaying(true)}
-                        className="absolute inset-0 bg-[#3D2B1F] flex flex-col items-center justify-center p-6 text-center cursor-pointer group z-20 transition-all duration-300"
+                        className="absolute inset-0 bg-[#ffffff] flex flex-col items-center justify-center p-6 text-center cursor-pointer group z-20 transition-all duration-300"
                       >
                         {/* Custom decorative inner stroke to match Quiet Luxury */}
-                        <div className="absolute inset-3 border border-[#8B4513]/20 rounded-[8px] pointer-events-none" />
+                        <div className="absolute inset-3 border border-[#00ffcc]/20 rounded-[8px] pointer-events-none" />
 
-                        <div className="w-16 h-16 rounded-full bg-[#D2B48C] flex items-center justify-center text-[#3D2B1F] shadow-none group-hover:scale-105 transition-transform duration-300 mb-4">
-                          <Play size={28} className="fill-current ml-1 text-[#3D2B1F]" />
+                        <div className="w-16 h-16 rounded-full bg-[#00ffcc] flex items-center justify-center text-[#ffffff] shadow-none group-hover:scale-105 transition-transform duration-300 mb-4">
+                          <Play size={28} className="fill-current ml-1 text-[#ffffff]" />
                         </div>
 
-                        <h3 className="text-base font-bold text-[#F9F5F0] max-w-md px-4 leading-tight group-hover:text-[#D2B48C] transition-colors line-clamp-2">
+                        <h3 className="text-base font-bold text-[#0d0d0d] max-w-md px-4 leading-tight group-hover:text-[#00ffcc] transition-colors line-clamp-2">
                           {currentLesson?.title || "Lesson Stream"}
                         </h3>
-                        <p className="text-[10px] font-bold tracking-wider uppercase text-[#D2B48C]/90 mt-2">
+                        <p className="text-[10px] font-bold tracking-wider uppercase text-[#00ffcc]/90 mt-2">
                           Click to Start Video Lecture
                         </p>
                       </div>
@@ -737,13 +737,13 @@ export default function CourseDetailPage() {
             {/* Right Side: Lesson Notes & Tasks */}
             <div className="lg:col-span-7 xl:col-span-7 lg:h-full lg:overflow-y-auto pr-4 scrollbar-thin scrollbar-thumb-amber-200 scrollbar-track-transparent min-h-0 pb-20">
               {isLocked ? (
-                <div className="bg-white border border-[#8B4513]/20 rounded-[12px] p-[32px] md:p-[48px] text-center space-y-[16px] shadow-none">
-                  <h3 className="text-base font-bold text-[#3D2B1F]">{currentLesson.title}</h3>
-                  <p className="text-xs text-[#3D2B1F]/70 max-w-sm mx-auto leading-[1.6] font-medium">
+                <div className="bg-[#141414] border border-[#00ffcc]/20 rounded-[12px] p-[32px] md:p-[48px] text-center space-y-[16px] shadow-none">
+                  <h3 className="text-base font-bold text-[#ffffff]">{currentLesson.title}</h3>
+                  <p className="text-xs text-[#ffffff]/70 max-w-sm mx-auto leading-[1.6] font-medium">
                     This module provides specialized masterclass video streaming, institutional lesson summaries, and assignment verifications.
                   </p>
                   <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 400, damping: 25 }} className="pt-2">
-                    <Button onClick={() => setShowPayment(true)} className="bg-[#D2B48C] hover:bg-[#C1A37B] text-[#3D2B1F] font-bold text-xs rounded-[8px] h-10 px-6 shadow-none">
+                    <Button onClick={() => setShowPayment(true)} className="bg-[#00ffcc] hover:bg-[#00e6b8] text-[#ffffff] font-bold text-xs rounded-[8px] h-10 px-6 shadow-none">
                       Unlock Full Access Now
                     </Button>
                   </motion.div>
@@ -758,16 +758,16 @@ export default function CourseDetailPage() {
           /* SCENARIO B: No Video */
           <div className="max-w-4xl mx-auto space-y-[32px] lg:h-full lg:overflow-y-auto pr-4 scrollbar-thin scrollbar-thumb-amber-200 scrollbar-track-transparent pb-20">
             {isLocked ? (
-              <div className="bg-white border border-[#8B4513]/20 rounded-[12px] p-[48px] text-center space-y-[16px] shadow-none">
-                <div className="w-12 h-12 bg-[#8B4513]/5 rounded-full flex items-center justify-center border border-[#8B4513]/10 mx-auto">
-                  <ShieldCheck size={24} className="text-[#8B4513]" />
+              <div className="bg-[#141414] border border-[#00ffcc]/20 rounded-[12px] p-[48px] text-center space-y-[16px] shadow-none">
+                <div className="w-12 h-12 bg-[#00ffcc]/5 rounded-full flex items-center justify-center border border-[#00ffcc]/10 mx-auto">
+                  <ShieldCheck size={24} className="text-[#00ffcc]" />
                 </div>
-                <h3 className="text-base font-bold text-[#3D2B1F]">Premium Study Guide Locked</h3>
-                <p className="text-xs text-[#3D2B1F]/70 max-w-sm mx-auto leading-[1.6] font-medium">
+                <h3 className="text-base font-bold text-[#ffffff]">Premium Study Guide Locked</h3>
+                <p className="text-xs text-[#ffffff]/70 max-w-sm mx-auto leading-[1.6] font-medium">
                   Enroll in this academic program track to instantly unseal expert learning references and submission slots.
                 </p>
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring", stiffness: 400, damping: 25 }} className="pt-2">
-                  <Button onClick={() => setShowPayment(true)} className="bg-[#D2B48C] hover:bg-[#C1A37B] text-[#3D2B1F] font-bold text-xs rounded-[8px] h-10 px-6 shadow-none">
+                  <Button onClick={() => setShowPayment(true)} className="bg-[#00ffcc] hover:bg-[#00e6b8] text-[#ffffff] font-bold text-xs rounded-[8px] h-10 px-6 shadow-none">
                     Start Course Program
                   </Button>
                 </motion.div>
@@ -776,7 +776,7 @@ export default function CourseDetailPage() {
               renderNotesAndAssessment()
             )}
 
-            <div className="pt-2 border-t border-[#8B4513]/10">
+            <div className="pt-2 border-t border-[#00ffcc]/10">
               {renderSyllabus()}
             </div>
           </div>

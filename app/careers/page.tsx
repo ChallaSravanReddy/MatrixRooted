@@ -78,8 +78,8 @@ export default function CareersPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#F9F5F0] flex items-center justify-center">
-        <div className="animate-spin h-8 w-8 border-4 border-[#8B4513] border-t-transparent rounded-full"></div>
+      <div className="min-h-screen bg-[#0d0d0d] flex items-center justify-center">
+        <div className="animate-spin h-8 w-8 border-4 border-[#00ffcc] border-t-transparent rounded-full"></div>
       </div>
     );
   }
@@ -105,14 +105,14 @@ export default function CareersPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F9F5F0] text-[#3D2B1F] font-sans overflow-hidden">
+    <div className="min-h-screen bg-[#0d0d0d] text-[#ffffff] font-sans overflow-hidden">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative py-[64px] md:py-[112px] overflow-hidden border-b border-[#8B4513]/10">
+      <section className="relative py-[64px] md:py-[112px] overflow-hidden border-b border-[#00ffcc]/10">
         {/* Subtle geometric structural patterns */}
         <div className="absolute top-0 right-0 w-96 h-96 opacity-5 pointer-events-none transform translate-x-1/3 -translate-y-1/3">
-          <svg viewBox="0 0 100 100" className="w-full h-full text-[#8B4513] stroke-current stroke-1 fill-none animate-spin-slow">
+          <svg viewBox="0 0 100 100" className="w-full h-full text-[#00ffcc] stroke-current stroke-1 fill-none animate-spin-slow">
             <circle cx="50" cy="50" r="45" />
             <circle cx="50" cy="50" r="25" />
             <line x1="50" y1="0" x2="50" y2="100" />
@@ -126,7 +126,7 @@ export default function CareersPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ type: "spring" as const, stiffness: 400, damping: 25 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#8B4513]/5 border border-[#8B4513]/10 text-xs font-bold text-[#8B4513] mb-[24px]"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#00ffcc]/5 border border-[#00ffcc]/10 text-xs font-bold text-[#00ffcc] mb-[24px]"
             >
               <Sparkles className="h-3.5 w-3.5" />
               PRODUCTION-READY ECOSYSTEM
@@ -137,10 +137,10 @@ export default function CareersPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ type: "spring" as const, stiffness: 400, damping: 25, delay: 0.1 }}
-              className="text-4xl md:text-6xl font-bold tracking-tight text-[#3D2B1F] leading-[1.15] mb-[24px]"
+              className="text-4xl md:text-6xl font-bold tracking-tight text-[#ffffff] leading-[1.15] mb-[24px]"
             >
               Join the Matrix Root <br />
-              <span className="text-[#8B4513]">Ecosystem.</span>
+              <span className="text-[#00ffcc]">Ecosystem.</span>
             </motion.h1>
             
             {/* Section 1 Description mapped precisely as instructed */}
@@ -148,7 +148,7 @@ export default function CareersPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ type: "spring" as const, stiffness: 400, damping: 25, delay: 0.2 }}
-              className="text-base md:text-lg text-[#3D2B1F]/80 leading-[1.6] font-medium mb-[40px]"
+              className="text-base md:text-lg text-[#ffffff]/80 leading-[1.6] font-medium mb-[40px]"
             >
               We don&apos;t just teach; we integrate. Our 8-week internship tracks are designed to turn students into production-ready developers.
             </motion.p>
@@ -159,8 +159,8 @@ export default function CareersPage() {
               transition={{ delay: 0.3 }}
             >
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring" as const, stiffness: 400, damping: 25 }} className="inline-block">
-                <Button asChild size="lg" className="rounded-[8px] px-[32px] h-[48px] font-bold text-sm bg-[#D2B48C] text-[#3D2B1F] hover:bg-[#C1A37B] shadow-none">
-                  <Link href="#listings">Explore Internship Listings <ArrowRight className="ml-2 h-4 w-4 text-[#8B4513]" /></Link>
+                <Button asChild size="lg" className="rounded-[8px] px-[32px] h-[48px] font-bold text-sm bg-[#00ffcc] text-[#ffffff] hover:bg-[#00e6b8] shadow-none">
+                  <Link href="#listings">Explore Internship Listings <ArrowRight className="ml-2 h-4 w-4 text-[#00ffcc]" /></Link>
                 </Button>
               </motion.div>
             </motion.div>
@@ -169,7 +169,7 @@ export default function CareersPage() {
       </section>
 
       {/* Key Integration Features */}
-      <section className="py-[64px] border-b border-[#8B4513]/10 bg-[#F9F5F0]">
+      <section className="py-[64px] border-b border-[#00ffcc]/10 bg-[#0d0d0d]">
         <div className="container mx-auto max-w-6xl px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[24px]">
             {[
@@ -183,14 +183,14 @@ export default function CareersPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ type: "spring" as const, stiffness: 400, damping: 25, delay: i * 0.1 }}
-                className="flex items-start gap-4 p-[24px] bg-white border border-[#8B4513]/15 rounded-[12px] hover:border-[#8B4513]/40 transition-colors group shadow-none"
+                className="flex items-start gap-4 p-[24px] bg-[#141414] border border-[#00ffcc]/15 rounded-[12px] hover:border-[#00ffcc]/40 transition-colors group shadow-none"
               >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[8px] bg-[#8B4513]/5 text-[#8B4513] group-hover:scale-105 transition-transform font-bold">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[8px] bg-[#00ffcc]/5 text-[#00ffcc] group-hover:scale-105 transition-transform font-bold">
                   <f.icon className="h-5 w-5" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-base text-[#3D2B1F] mb-[6px]">{f.title}</h3>
-                  <p className="text-xs text-[#3D2B1F]/80 leading-[1.6] font-medium">{f.desc}</p>
+                  <h3 className="font-bold text-base text-[#ffffff] mb-[6px]">{f.title}</h3>
+                  <p className="text-xs text-[#ffffff]/80 leading-[1.6] font-medium">{f.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -203,10 +203,10 @@ export default function CareersPage() {
         <div className="container mx-auto max-w-6xl px-4 space-y-[64px]">
           
           {/* Section Header */}
-          <div className="space-y-2 border-b border-[#8B4513]/10 pb-[16px]">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#8B4513]">Training-cum-Internships</span>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#3D2B1F]">Core Internship Tracks</h2>
-            <p className="text-xs md:text-sm text-[#3D2B1F]/80 font-medium">Select your specialization to initiate application parameters and launch integration workflows.</p>
+          <div className="space-y-2 border-b border-[#00ffcc]/10 pb-[16px]">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#00ffcc]">Training-cum-Internships</span>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#ffffff]">Core Internship Tracks</h2>
+            <p className="text-xs md:text-sm text-[#ffffff]/80 font-medium">Select your specialization to initiate application parameters and launch integration workflows.</p>
           </div>
 
           {/* Explicitly instructed listings showcase */}
@@ -222,35 +222,35 @@ export default function CareersPage() {
                 <motion.div 
                   variants={cardVariants}
                   key={track.id}
-                  className="group relative flex flex-col bg-white border border-[#8B4513]/20 rounded-[12px] p-[32px] hover:border-[#8B4513]/40 transition-colors shadow-none overflow-hidden"
+                  className="group relative flex flex-col bg-[#141414] border border-[#00ffcc]/20 rounded-[12px] p-[32px] hover:border-[#00ffcc]/40 transition-colors shadow-none overflow-hidden"
                 >
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#8B4513]/5 rounded-bl-full pointer-events-none group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#00ffcc]/5 rounded-bl-full pointer-events-none group-hover:scale-105 transition-transform duration-500" />
 
-                  <div className="border-b border-[#8B4513]/10 pb-[12px] mb-[16px] flex items-center justify-between relative z-10">
-                    <span className="text-[10px] font-bold text-[#8B4513] uppercase tracking-wider bg-[#8B4513]/5 border border-[#8B4513]/10 px-2.5 py-0.5 rounded-[6px]">
+                  <div className="border-b border-[#00ffcc]/10 pb-[12px] mb-[16px] flex items-center justify-between relative z-10">
+                    <span className="text-[10px] font-bold text-[#00ffcc] uppercase tracking-wider bg-[#00ffcc]/5 border border-[#00ffcc]/10 px-2.5 py-0.5 rounded-[6px]">
                       {track.department}
                     </span>
-                    <span className="text-[10px] font-bold text-[#3D2B1F]/60 flex items-center gap-1">
-                      <Clock size={12} className="text-[#8B4513]" /> {track.duration}
+                    <span className="text-[10px] font-bold text-[#ffffff]/60 flex items-center gap-1">
+                      <Clock size={12} className="text-[#00ffcc]" /> {track.duration}
                     </span>
                   </div>
 
                   <div className="flex-1 space-y-[12px] mb-[32px] relative z-10">
                     <div className="flex items-center gap-2">
-                      <IconComp className="h-5 w-5 text-[#8B4513] shrink-0" />
-                      <h3 className="text-xl font-bold text-[#3D2B1F] leading-tight group-hover:text-[#8B4513] transition-colors">
+                      <IconComp className="h-5 w-5 text-[#00ffcc] shrink-0" />
+                      <h3 className="text-xl font-bold text-[#ffffff] leading-tight group-hover:text-[#00ffcc] transition-colors">
                         {track.title}
                       </h3>
                     </div>
                     
-                    <p className="text-xs md:text-sm text-[#3D2B1F]/90 leading-[1.6] font-medium pt-1">
+                    <p className="text-xs md:text-sm text-[#ffffff]/90 leading-[1.6] font-medium pt-1">
                       {track.description}
                     </p>
                     
-                    <div className="pt-[12px] space-y-1.5 border-t border-[#8B4513]/5 mt-4">
+                    <div className="pt-[12px] space-y-1.5 border-t border-[#00ffcc]/5 mt-4">
                       {["Human-First Coding Logic", "Production Deployment Access", "Senior Engineering Verification"].map((item, idx) => (
-                        <div key={idx} className="flex items-center gap-1.5 text-[10px] font-bold text-[#3D2B1F]/60 uppercase tracking-wider">
-                          <ChevronRight className="h-3 w-3 text-[#8B4513]" />
+                        <div key={idx} className="flex items-center gap-1.5 text-[10px] font-bold text-[#ffffff]/60 uppercase tracking-wider">
+                          <ChevronRight className="h-3 w-3 text-[#00ffcc]" />
                           {item}
                         </div>
                       ))}
@@ -260,10 +260,10 @@ export default function CareersPage() {
                   <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring" as const, stiffness: 400, damping: 25 }} className="relative z-10 mt-auto pt-2">
                     <Button 
                       asChild 
-                      className="w-full h-11 rounded-[8px] font-bold text-xs bg-[#D2B48C] text-[#3D2B1F] hover:bg-[#C1A37B] shadow-none flex items-center justify-center gap-1.5"
+                      className="w-full h-11 rounded-[8px] font-bold text-xs bg-[#00ffcc] text-[#ffffff] hover:bg-[#00e6b8] shadow-none flex items-center justify-center gap-1.5"
                     >
                       <Link href={`/signup?internship=${track.id}`}>
-                        Apply for Internship <ArrowRight size={14} className="text-[#8B4513]" />
+                        Apply for Internship <ArrowRight size={14} className="text-[#00ffcc]" />
                       </Link>
                     </Button>
                   </motion.div>
@@ -274,11 +274,11 @@ export default function CareersPage() {
 
           {/* Dynamically Loaded Program Offerings section */}
           {courses.length > 0 && (
-            <div className="pt-[32px] border-t border-[#8B4513]/10 space-y-[32px]">
+            <div className="pt-[32px] border-t border-[#00ffcc]/10 space-y-[32px]">
               <div className="flex flex-col md:flex-row md:items-end justify-between gap-[16px]">
                 <div>
-                  <h3 className="text-xl font-bold text-[#3D2B1F]">Additional Stream Integrations</h3>
-                  <p className="text-xs text-[#3D2B1F]/70 font-medium">Parallel technological execution modules mapped to local database parameters.</p>
+                  <h3 className="text-xl font-bold text-[#ffffff]">Additional Stream Integrations</h3>
+                  <p className="text-xs text-[#ffffff]/70 font-medium">Parallel technological execution modules mapped to local database parameters.</p>
                 </div>
                 <div className="flex flex-wrap gap-[8px]">
                   {categories.map((cat) => (
@@ -287,8 +287,8 @@ export default function CareersPage() {
                       onClick={() => setSelectedCategory(cat.id)}
                       className={`px-3 py-1.5 rounded-[8px] border text-xs font-bold transition-colors shadow-none ${
                         selectedCategory === cat.id 
-                          ? "border-[#8B4513]/30 bg-[#8B4513]/5 text-[#8B4513]" 
-                          : "border-[#8B4513]/10 bg-white text-[#3D2B1F]/70 hover:border-[#8B4513]/20 hover:text-[#3D2B1F]"
+                          ? "border-[#00ffcc]/30 bg-[#00ffcc]/5 text-[#00ffcc]" 
+                          : "border-[#00ffcc]/10 bg-[#141414] text-[#ffffff]/70 hover:border-[#00ffcc]/20 hover:text-[#ffffff]"
                       }`}
                     >
                       {cat.name}
@@ -308,26 +308,26 @@ export default function CareersPage() {
                   <motion.div 
                     variants={cardVariants}
                     key={course.id}
-                    className="group relative flex flex-col bg-white border border-[#8B4513]/20 rounded-[12px] p-[24px] hover:border-[#8B4513]/40 transition-colors shadow-none overflow-hidden"
+                    className="group relative flex flex-col bg-[#141414] border border-[#00ffcc]/20 rounded-[12px] p-[24px] hover:border-[#00ffcc]/40 transition-colors shadow-none overflow-hidden"
                   >
                     {course.video_url && (
-                      <div className="h-32 w-full rounded-[8px] overflow-hidden mb-[16px] border border-[#8B4513]/10 relative bg-[#F9F5F0] shrink-0">
+                      <div className="h-32 w-full rounded-[8px] overflow-hidden mb-[16px] border border-[#00ffcc]/10 relative bg-[#0d0d0d] shrink-0">
                         <img src={getYouTubeThumbnail(course.video_url)} alt={course.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                       </div>
                     )}
 
-                    <div className="border-b border-[#8B4513]/10 pb-[12px] mb-[12px] flex items-center justify-between">
-                      <span className="text-[9px] font-bold text-[#8B4513] uppercase tracking-wider bg-[#8B4513]/5 border border-[#8B4513]/10 px-2 py-0.5 rounded-[4px]">
+                    <div className="border-b border-[#00ffcc]/10 pb-[12px] mb-[12px] flex items-center justify-between">
+                      <span className="text-[9px] font-bold text-[#00ffcc] uppercase tracking-wider bg-[#00ffcc]/5 border border-[#00ffcc]/10 px-2 py-0.5 rounded-[4px]">
                         {course.departments?.name || "Ecosystem"}
                       </span>
-                      <Terminal className="w-3.5 h-3.5 text-[#8B4513]/60" />
+                      <Terminal className="w-3.5 h-3.5 text-[#00ffcc]/60" />
                     </div>
 
                     <div className="flex-1 space-y-[8px] mb-[24px]">
-                      <h4 className="text-base font-bold text-[#3D2B1F] leading-tight group-hover:text-[#8B4513] transition-colors line-clamp-2">
+                      <h4 className="text-base font-bold text-[#ffffff] leading-tight group-hover:text-[#00ffcc] transition-colors line-clamp-2">
                         {course.title}
                       </h4>
-                      <p className="text-xs text-[#3D2B1F]/80 leading-[1.6] line-clamp-2 font-medium">
+                      <p className="text-xs text-[#ffffff]/80 leading-[1.6] line-clamp-2 font-medium">
                         {course.description}
                       </p>
                     </div>
@@ -335,7 +335,7 @@ export default function CareersPage() {
                     <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring" as const, stiffness: 400, damping: 25 }} className="mt-auto">
                       <Button 
                         asChild 
-                        className="w-full h-9 rounded-[8px] font-bold text-xs bg-[#D2B48C] text-[#3D2B1F] hover:bg-[#C1A37B] shadow-none"
+                        className="w-full h-9 rounded-[8px] font-bold text-xs bg-[#00ffcc] text-[#ffffff] hover:bg-[#00e6b8] shadow-none"
                       >
                         <Link href={`/signup?course=${course.id}`}>
                           Apply for Internship

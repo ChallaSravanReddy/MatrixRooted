@@ -29,11 +29,11 @@ export default function ApplyPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F9F5F0] py-20 px-4">
-      <div className="max-w-3xl mx-auto bg-white/60 backdrop-blur-md rounded-2xl border border-[#8B4513]/10 shadow-xl overflow-hidden">
-        <div className="bg-[#8B4513]/5 px-8 py-10 text-center border-b border-[#8B4513]/10">
-          <h1 className="text-3xl font-bold tracking-tight text-[#3D2B1F] mb-3">Apply for Internship</h1>
-          <p className="text-[#3D2B1F]/70 max-w-lg mx-auto">
+    <div className="min-h-screen bg-[#0d0d0d] py-20 px-4">
+      <div className="max-w-3xl mx-auto bg-[#141414]/60 backdrop-blur-md rounded-2xl border border-[#00ffcc]/10 shadow-xl overflow-hidden">
+        <div className="bg-[#00ffcc]/5 px-8 py-10 text-center border-b border-[#00ffcc]/10">
+          <h1 className="text-3xl font-bold tracking-tight text-[#ffffff] mb-3">Apply for Internship</h1>
+          <p className="text-[#ffffff]/70 max-w-lg mx-auto">
             Join the Matrix Root Ecosystem. Fill out the form below to begin your application process for our internship programs.
           </p>
         </div>
@@ -48,72 +48,72 @@ export default function ApplyPage() {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <Label htmlFor="fullName" className="text-[#3D2B1F] font-semibold">Full Name</Label>
+                <Label htmlFor="fullName" className="text-[#ffffff] font-semibold">Full Name</Label>
                 <input 
                   type="text" 
                   id="fullName" 
                   name="fullName" 
                   required
                   placeholder="John Doe"
-                  className="flex h-10 w-full rounded-md border border-[#8B4513]/20 bg-white/50 px-3 py-2 text-sm placeholder:text-[#3D2B1F]/40 focus:outline-none focus:ring-2 focus:ring-[#8B4513]/50 transition-all"
+                  className="flex h-10 w-full rounded-md border border-[#00ffcc]/20 bg-[#141414]/50 px-3 py-2 text-sm placeholder:text-[#ffffff]/40 focus:outline-none focus:ring-2 focus:ring-[#00ffcc]/50 transition-all"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-[#3D2B1F] font-semibold">Gmail</Label>
+                <Label htmlFor="email" className="text-[#ffffff] font-semibold">Gmail</Label>
                 <input 
                   type="email" 
                   id="email" 
                   name="email" 
                   required
                   placeholder="john.doe@gmail.com"
-                  className="flex h-10 w-full rounded-md border border-[#8B4513]/20 bg-white/50 px-3 py-2 text-sm placeholder:text-[#3D2B1F]/40 focus:outline-none focus:ring-2 focus:ring-[#8B4513]/50 transition-all"
+                  className="flex h-10 w-full rounded-md border border-[#00ffcc]/20 bg-[#141414]/50 px-3 py-2 text-sm placeholder:text-[#ffffff]/40 focus:outline-none focus:ring-2 focus:ring-[#00ffcc]/50 transition-all"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="phoneNumber" className="text-[#3D2B1F] font-semibold">Phone Number</Label>
+                <Label htmlFor="phoneNumber" className="text-[#ffffff] font-semibold">Phone Number</Label>
                 <input 
                   type="tel" 
                   id="phoneNumber" 
                   name="phoneNumber" 
                   required
                   placeholder="+91 9876543210"
-                  className="flex h-10 w-full rounded-md border border-[#8B4513]/20 bg-white/50 px-3 py-2 text-sm placeholder:text-[#3D2B1F]/40 focus:outline-none focus:ring-2 focus:ring-[#8B4513]/50 transition-all"
+                  className="flex h-10 w-full rounded-md border border-[#00ffcc]/20 bg-[#141414]/50 px-3 py-2 text-sm placeholder:text-[#ffffff]/40 focus:outline-none focus:ring-2 focus:ring-[#00ffcc]/50 transition-all"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="college" className="text-[#3D2B1F] font-semibold">College Name</Label>
+                <Label htmlFor="college" className="text-[#ffffff] font-semibold">College Name</Label>
                 <input 
                   type="text" 
                   id="college" 
                   name="college" 
                   required
                   placeholder="Matrix Institute of Technology"
-                  className="flex h-10 w-full rounded-md border border-[#8B4513]/20 bg-white/50 px-3 py-2 text-sm placeholder:text-[#3D2B1F]/40 focus:outline-none focus:ring-2 focus:ring-[#8B4513]/50 transition-all"
+                  className="flex h-10 w-full rounded-md border border-[#00ffcc]/20 bg-[#141414]/50 px-3 py-2 text-sm placeholder:text-[#ffffff]/40 focus:outline-none focus:ring-2 focus:ring-[#00ffcc]/50 transition-all"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="courseOfStudy" className="text-[#3D2B1F] font-semibold">Course of Study</Label>
+                <Label htmlFor="courseOfStudy" className="text-[#ffffff] font-semibold">Course of Study</Label>
                 <input 
                   type="text" 
                   id="courseOfStudy" 
                   name="courseOfStudy" 
                   required
                   placeholder="e.g., B.Tech CSE, BCA, MCA"
-                  className="flex h-10 w-full rounded-md border border-[#8B4513]/20 bg-white/50 px-3 py-2 text-sm placeholder:text-[#3D2B1F]/40 focus:outline-none focus:ring-2 focus:ring-[#8B4513]/50 transition-all"
+                  className="flex h-10 w-full rounded-md border border-[#00ffcc]/20 bg-[#141414]/50 px-3 py-2 text-sm placeholder:text-[#ffffff]/40 focus:outline-none focus:ring-2 focus:ring-[#00ffcc]/50 transition-all"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="yearOfStudy" className="text-[#3D2B1F] font-semibold">Year of Study</Label>
+                <Label htmlFor="yearOfStudy" className="text-[#ffffff] font-semibold">Year of Study</Label>
                 <select 
                   id="yearOfStudy" 
                   name="yearOfStudy" 
                   required
-                  className="flex h-10 w-full rounded-md border border-[#8B4513]/20 bg-white/50 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#8B4513]/50 transition-all"
+                  className="flex h-10 w-full rounded-md border border-[#00ffcc]/20 bg-[#141414]/50 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#00ffcc]/50 transition-all"
                 >
                   <option value="">Select Year</option>
                   <option value="1st Year">1st Year</option>
@@ -126,12 +126,12 @@ export default function ApplyPage() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="internshipDomain" className="text-[#3D2B1F] font-semibold">Internship Domain</Label>
+              <Label htmlFor="internshipDomain" className="text-[#ffffff] font-semibold">Internship Domain</Label>
               <select 
                 id="internshipDomain" 
                 name="internshipDomain" 
                 required
-                className="flex h-10 w-full rounded-md border border-[#8B4513]/20 bg-white/50 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#8B4513]/50 transition-all"
+                className="flex h-10 w-full rounded-md border border-[#00ffcc]/20 bg-[#141414]/50 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#00ffcc]/50 transition-all"
               >
                 <option value="">Select Domain</option>
                 <option value="Full Stack Development">Full Stack Development</option>
@@ -143,22 +143,22 @@ export default function ApplyPage() {
             </div>
 
             <div className="flex items-start space-x-3 pt-4">
-              <Checkbox id="termsAccepted" name="termsAccepted" required className="mt-1 border-[#8B4513]/30 data-[state=checked]:bg-[#8B4513] data-[state=checked]:text-white" />
+              <Checkbox id="termsAccepted" name="termsAccepted" required className="mt-1 border-[#00ffcc]/30 data-[state=checked]:bg-[#00ffcc] data-[state=checked]:text-white" />
               <div className="grid gap-1.5 leading-none">
                 <label
                   htmlFor="termsAccepted"
-                  className="text-sm font-medium leading-relaxed peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[#3D2B1F]/80"
+                  className="text-sm font-medium leading-relaxed peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[#ffffff]/80"
                 >
                   Accept Terms and Conditions
                 </label>
-                <p className="text-xs text-[#3D2B1F]/60">
+                <p className="text-xs text-[#ffffff]/60">
                   By applying, you agree to our Terms of Service and Privacy Policy. You confirm that all provided information is accurate.
                 </p>
               </div>
             </div>
 
             <div className="pt-4">
-              <Button type="submit" className="w-full bg-[#D2B48C] text-[#3D2B1F] hover:bg-[#C1A37B] font-bold py-6 text-base rounded-xl transition-all shadow-md hover:shadow-lg" disabled={loading}>
+              <Button type="submit" className="w-full bg-[#00ffcc] text-black hover:bg-[#00e6b8] font-bold py-6 text-base rounded-xl transition-all shadow-md hover:shadow-lg" disabled={loading}>
                 {loading ? "Submitting Application..." : "Apply for Internship"}
               </Button>
             </div>
