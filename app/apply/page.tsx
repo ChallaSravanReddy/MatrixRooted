@@ -15,17 +15,22 @@ export default function ApplyPage() {
     setLoading(true);
     setMessage(null);
 
-    const formData = new FormData(event.currentTarget);
-    const result = await submitApplication(formData);
+    try {
+      const formData = new FormData(event.currentTarget);
+      const result = await submitApplication(formData);
 
-    if (result.error) {
-      setMessage({ type: "error", text: result.error });
-    } else if (result.success) {
-      setMessage({ type: "success", text: "Application submitted successfully! We will contact you soon." });
-      (event.target as HTMLFormElement).reset();
+      if (result.error) {
+        setMessage({ type: "error", text: result.error });
+      } else if (result.success) {
+        setMessage({ type: "success", text: "Application submitted successfully! Please check your email for the Offer Letter." });
+        (event.target as HTMLFormElement).reset();
+      }
+    } catch (err: any) {
+      console.error("Submission crash:", err);
+      setMessage({ type: "error", text: "A critical error occurred. Please refresh the page and try again." });
+    } finally {
+      setLoading(false);
     }
-    
-    setLoading(false);
   }
 
   return (

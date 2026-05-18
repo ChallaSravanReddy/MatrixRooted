@@ -3,7 +3,7 @@
 import { supabase } from "@/lib/supabaseClient";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+
 
 export async function submitApplication(formData: FormData) {
   const fullName = formData.get("fullName") as string;
@@ -56,6 +56,8 @@ export async function submitApplication(formData: FormData) {
       // Use the NEXT_PUBLIC_SITE_URL or fallback to localhost for local testing
       const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
       const offerLink = `${siteUrl}/offer/${data.id}`;
+      
+      const resend = new Resend(process.env.RESEND_API_KEY);
       
       await resend.emails.send({
         from: "Matrix Root Ecosystem <onboarding@resend.dev>", // Resend testing domain
