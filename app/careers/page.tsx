@@ -256,9 +256,9 @@ export default function CareersPage() {
                   <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring" as const, stiffness: 400, damping: 25 }} className="relative z-10 mt-auto pt-2">
                     <Button 
                       asChild 
-                      className="w-full h-11 rounded-[8px] font-bold text-xs bg-[#00ffcc] text-[#ffffff] hover:bg-[#00e6b8] shadow-none flex items-center justify-center gap-1.5"
+                      className="w-full h-11 rounded-[8px] font-bold text-xs bg-[#00ffcc] text-black hover:bg-[#00e6b8] shadow-none flex items-center justify-center gap-1.5"
                     >
-                      <Link href={`/signup?internship=${track.id}`}>
+                      <Link href="/apply">
                         Apply for Internship <ArrowRight size={14} className="text-[#00ffcc]" />
                       </Link>
                     </Button>
@@ -331,9 +331,9 @@ export default function CareersPage() {
                     <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.98 }} transition={{ type: "spring" as const, stiffness: 400, damping: 25 }} className="mt-auto">
                       <Button 
                         asChild 
-                        className="w-full h-9 rounded-[8px] font-bold text-xs bg-[#00ffcc] text-[#ffffff] hover:bg-[#00e6b8] shadow-none"
+                        className="w-full h-9 rounded-[8px] font-bold text-xs bg-[#00ffcc] text-black hover:bg-[#00e6b8] shadow-none"
                       >
-                        <Link href={`/signup?course=${course.id}`}>
+                        <Link href="/apply">
                           Apply for Internship
                         </Link>
                       </Button>

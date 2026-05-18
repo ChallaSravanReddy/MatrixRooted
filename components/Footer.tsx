@@ -28,7 +28,7 @@ export function Footer() {
             <ul className="space-y-3 text-xs font-medium text-[#ffffff]/80">
               <li><Link href="/#services" className="hover:text-[#ffffff] transition-colors">Services & Results</Link></li>
               <li><Link href="/careers" className="hover:text-[#ffffff] transition-colors">Internship Ecosystem</Link></li>
-              <li><Link href="/signup" className="hover:text-[#ffffff] transition-colors">Explore Tracks</Link></li>
+              <li><Link href="/careers" className="hover:text-[#ffffff] transition-colors">Explore Tracks</Link></li>
             </ul>
           </div>
 
