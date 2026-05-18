@@ -19,7 +19,7 @@ export async function submitApplication(formData: FormData) {
     return { error: "All fields are required, including accepting the terms and conditions." };
   }
 
-  const { error } = await supabase
+  const { data, error } = await supabase
     .from("internship_applications")
     .insert([
       {
